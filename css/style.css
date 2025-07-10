@@ -7,6 +7,8 @@
 body{
     margin: 0;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header{
@@ -14,19 +16,20 @@ header{
     height: 100vh;
     background: linear-gradient(to right , #00B4FA, #0017FA, #031926);
     color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
     transition: height 0.5s ease;
     z-index: 100;/* situado por arriba de los demas elementos*/
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header.animated-header{
-    height: 10%;
+    height: 10vh;
 }
 
 #main-header h1{
@@ -35,14 +38,18 @@ header.animated-header{
     text-align: center;
 }
 
+#main-container{
+    width: 100%;
+    padding-top: 10vh;
+}
+
 .menu{
     width: 100%;
     height: auto;
     background-color: aqua;
     margin: 0;
-    position: fixed;
-    top: 10%;
-    left: 0;
+    position: sticky;
+    top: 10vh;
     z-index: 90;
 }
 
@@ -62,7 +69,6 @@ header.animated-header{
 
 #section-container{
     width: 100%;
-    height: 100vh;
 }
 
 .section{
