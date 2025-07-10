@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+}
+
+#main-header{
+    width: 100%;
+    background-color: blue;
+}
+
+#main-header h1{
+    margin: 0;
+    padding: 1%;
+}
+
+.menu{
+    width: 100%;
+    background-color: aqua;
+    margin: 0;
+}
+
+.menu ul{
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu ul li{
+    width: 25%;
+    text-align: center;
+}
+
+#main-section{
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*################################ card-article styles ######################*/
+.card-article{
+    width: 30%;
+    background-color: white;
+    margin: 1%;
+    border-radius: 15px;
+}
+
+.card-article h2{
+    width: 100%;
+    text-align: center;
+}
+
+.card-article p{
+    width: 100%;
+    padding: 1em;
+}
+
+.footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 1%;
+}
