@@ -4,12 +4,13 @@ body{
 
 #main-header{
     width: 100%;
-    background-color: blue;
+    background: linear-gradient(to right , #00B4FA, #0017FA, #8201FA);
 }
 
 #main-header h1{
     margin: 0;
     padding: 1%;
+    text-align: center;
 }
 
 .menu{
