@@ -4,10 +4,6 @@
     --tran-slow: 3s ease all;
 }
 
-html {
-  scroll-behavior: calc(1);
-}
-
 body{
     margin: 0;
     width: 100%;
@@ -33,19 +29,19 @@ header{
 }
 
 header.animated-header{
-    height: 10%;
+    height: 10vh;
 }
 
 #main-header h1{
     margin: 0;
-    padding: 1%;
+    /*padding: 1%;*/
     text-align: center;
 }
 
 #main-container{
     width: 100%;
     height: auto;
-    padding-top: 10%;
+    padding-top: 9%;
     padding-bottom: 7%;
 }
 
@@ -55,7 +51,7 @@ header.animated-header{
     background-color: aqua;
     margin: 0;
     position: sticky;
-    top: 10%;
+    top: 10vh;
     z-index: 90;
 }
 
