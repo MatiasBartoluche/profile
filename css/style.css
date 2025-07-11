@@ -4,6 +4,10 @@
     --tran-slow: 3s ease all;
 }
 
+html {
+  scroll-behavior: calc(1);
+}
+
 body{
     margin: 0;
     width: 100%;
@@ -29,7 +33,7 @@ header{
 }
 
 header.animated-header{
-    height: 10vh;
+    height: 10%;
 }
 
 #main-header h1{
@@ -40,7 +44,9 @@ header.animated-header{
 
 #main-container{
     width: 100%;
-    padding-top: 10vh;
+    height: auto;
+    padding-top: 10%;
+    padding-bottom: 7%;
 }
 
 .menu{
@@ -49,7 +55,7 @@ header.animated-header{
     background-color: aqua;
     margin: 0;
     position: sticky;
-    top: 10vh;
+    top: 10%;
     z-index: 90;
 }
 
@@ -107,6 +113,8 @@ header.animated-header{
 
 .footer{
     width: 100%;
+
+    height: 5%;
     background-color: black;
     color: white;
     margin: 0;
