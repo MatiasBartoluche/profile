@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function animatedHeader(){
-    console.log("animated header");
     const header = document.getElementById('main-header');
     let lastScrollTop = 0;
 

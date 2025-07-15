@@ -41,8 +41,10 @@ header.animated-header{
 #main-container{
     width: 100%;
     height: auto;
-    padding-top: 9%;
-    padding-bottom: 7%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
 }
 
 .menu{
@@ -52,6 +54,7 @@ header.animated-header{
     margin: 0;
     position: sticky;
     top: 10vh;
+    left: 0;
     z-index: 90;
 }
 
@@ -110,7 +113,7 @@ header.animated-header{
 .footer{
     width: 100%;
 
-    height: 5%;
+    height: 5vh;
     background-color: black;
     color: white;
     margin: 0;
