@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function animatedHeader(){
     const header = document.getElementById('main-header');
+    const title = document.getElementById('title');
+    const image_header = document.getElementById('image-header');
     let lastScrollTop = 0;
 
     window.addEventListener('scroll', function(){
@@ -12,10 +14,14 @@ function animatedHeader(){
 
         if(scrollTop === 0){
             header.classList.remove('animated-header');
+            title.classList.remove('animated-title');
+            image_header.classList.remove('animated-image-header');
             scrollController();
         }
         else if(scrollTop > lastScrollTop){
             header.classList.add('animated-header');
+            title.classList.remove('animated-header');
+            image_header.classList.remove('animated-header');
         }
         lastScrollTop = scrollTop;
     });

@@ -11,25 +11,69 @@ body{
     flex-wrap: wrap;
 }
 
-header{
+
+/*#################################### estilos para header #################################*/
+.header{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right , #00B4FA, #0017FA, #031926);
+    background: linear-gradient(to right, #0e4674, #4b0a80);
     color: white;
     transition: height 0.5s ease;
     z-index: 100;/* situado por arriba de los demas elementos*/
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-header.animated-header{
-    height: 10vh;
+#title{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    transition: width 0.5s ease, height 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+#title h1 {
+    font-size: 3em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#title h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0 0;
+    width: 100%;
+    text-align: center;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#contact-buttons{
+    width: 100%;
+}
+
+#image-header{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    transition: width 0.5s ease, height 0.5s ease;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#image-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar su contenedor */
+    transition: width 0.5s ease, height 0.5s ease;
 }
 
 #main-header h1{
@@ -38,6 +82,34 @@ header.animated-header{
     text-align: center;
 }
 
+
+/* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
+
+.header.animated-header{
+    height: 10vh;
+}
+
+.header.animated-header #title{
+    width: 50%;
+    height: 10vh;
+}
+
+.header.animated-header #title h1{
+    width: 50%;
+}
+
+.header.animated-header #title h2{
+    width: 50%;
+}
+
+.header.animated-header #image-header{
+    width: 50%;
+    height: 10vh;
+}
+
+/* ############################ estilos parte central de la pagina ######################### */
+
+/* contenedor central*/
 #main-container{
     width: 100%;
     height: auto;
@@ -47,6 +119,7 @@ header.animated-header{
     padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
 }
 
+/* menu de navegacion*/
 .menu{
     width: 100%;
     height: auto;
@@ -76,6 +149,8 @@ header.animated-header{
     width: 100%;
 }
 
+
+/* seccion principal */
 .section{
     width: 100%;
     background-color: blueviolet;
