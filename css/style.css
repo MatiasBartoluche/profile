@@ -2,6 +2,8 @@
     --tran-fast: 0.5s ease all;
     --tran-medium: 1.5s ease all;
     --tran-slow: 3s ease all;
+    --black-color: #161a20;
+    --white-color: #f0f0f0;
 }
 
 body{
@@ -11,6 +13,46 @@ body{
     flex-wrap: wrap;
 }
 
+/* ################################### estilos generales ###################################*/
+
+.social-media-button{
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    border: 0;
+}
+
+/* capa superior, botones inicialmente en negro */
+.custom-button{
+    padding: 1em 2em;
+    background-color: var(--black-color);
+    border: none;
+    color: var(--white-color);
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* capa inferior, para que el boton simule un border con linear-gradient */
+.custom-button::after{
+    content: '';
+    position: absolute;
+    height: 107%; /* agrandar width y height para que linear-gradient sobresalga por detras del boton*/
+    width: 102%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -1; /* este contenedor aparecera detras del boton */
+}
+
+.custom-button:hover{
+    z-index: 0; /* para visualizar todo el boton con linear-gradient */
+}
+
+.light-button:hover{
+    box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+}
 
 /*#################################### estilos para header #################################*/
 .header{
@@ -24,18 +66,22 @@ body{
     top: 0;
     left: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 }
 
+/* contenedor de titulo, subtitulo y botones de redes sociales */
 #title{
     width: 100%;
     height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    transition: width 0.5s ease, height 0.5s ease;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    flex: 1 1 50%; /* Base 50%, crece y se achica */
+    transition: all 0.5s ease;
 } 
 
 #title h1 {
@@ -54,19 +100,28 @@ body{
     transition: width 0.5s ease, height 0.5s ease;
 }
 
+/* contenedor de botones */
 #contact-buttons{
-    width: 100%;
+    width: 50%;
+    transition: width 0.5s ease, height 0.5s ease;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+#cv{
+    height: 64px;
+}
+
+/* contenedor de imagen */
 #image-header{
     width: 100%;
     height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    transition: width 0.5s ease, height 0.5s ease;
     position: absolute;
     bottom: 0;
     right: 0;
+
+    flex: 1 1 50%; /* Base 50%, crece y se achica */
+    transition: all 0.5s ease;
 }
 
 #image-header img {
@@ -75,13 +130,6 @@ body{
     object-fit: cover; /* Ajusta la imagen para llenar su contenedor */
     transition: width 0.5s ease, height 0.5s ease;
 }
-
-#main-header h1{
-    margin: 0;
-    /*padding: 1%;*/
-    text-align: center;
-}
-
 
 /* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
 
@@ -92,14 +140,34 @@ body{
 .header.animated-header #title{
     width: 50%;
     height: 10vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .header.animated-header #title h1{
-    width: 50%;
+    width: 70%;
+    max-height: fit-content;
 }
 
 .header.animated-header #title h2{
-    width: 50%;
+    display: none;
+}
+
+.header.animated-header #contact-buttons{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.header.animated-header .social-media-button{
+    width: 32px;
+    height: 32px;
+}
+
+.header.animated-header #cv{
+    height: 32px;
 }
 
 .header.animated-header #image-header{
