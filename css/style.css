@@ -3,6 +3,7 @@
     --tran-medium: 1.5s ease all;
     --tran-slow: 3s ease all;
     --black-color: #161a20;
+    --black-transparent: rgb(0,0,0,0.9);
     --white-color: #f0f0f0;
 }
 
@@ -181,7 +182,7 @@ body{
 #main-container{
     width: 100%;
     height: auto;
-    position: absolute;
+    position: relative;
     top: 10vh;
     left: 0;
     padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
@@ -191,7 +192,7 @@ body{
 .menu{
     width: 100%;
     height: auto;
-    background-color: aqua;
+    background-color: var(--black-transparent);
     margin: 0;
     position: sticky;
     top: 10vh;
@@ -202,21 +203,53 @@ body{
 .menu ul{
     width: 100%;
     margin: 0;
-    padding: 1%;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
 }
 
 .menu ul li{
-    width: 25%;
+    width: 23%;
     text-align: center;
+    padding: 1%;
+    list-style: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+.menu ul li:hover{
+    background-color: #223755;
+}
+
+.menu ul li a{
+    position: relative;
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
 }
 
 #section-container{
     width: 100%;
 }
-
 
 /* seccion principal */
 .section{
