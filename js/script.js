@@ -16,12 +16,13 @@ function animatedHeader(){
             header.classList.remove('animated-header');
             title.classList.remove('animated-title');
             image_header.classList.remove('animated-image-header');
-            scrollController();
+            
         }
         else if(scrollTop > lastScrollTop){
             header.classList.add('animated-header');
-            title.classList.remove('animated-header');
-            image_header.classList.remove('animated-header');
+            title.classList.add('animated-header');
+            image_header.classList.add('animated-header');
+            scrollController();
         }
         lastScrollTop = scrollTop;
     });
