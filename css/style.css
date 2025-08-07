@@ -3,7 +3,7 @@
     --tran-medium: 1.5s ease all;
     --tran-slow: 3s ease all;
     --black-color: #161a20;
-    --black-transparent: rgb(0,0,0,0.9);
+    --black-transparent: rgba(0, 0, 0, 0.7);
     --white-color: #f0f0f0;
 }
 
@@ -59,6 +59,58 @@ body{
 
 .light-button:hover{
     box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+}
+
+/*############################ estilos elementos luminosos ############################*/
+
+.glow-element::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.glow-element::before{
+    content: "";
+    background: linear-gradient(45deg ,#ff0000 ,#ff7300 
+                                    ,#fffb00 ,#48ff00 ,#00ffd5
+                                    ,#002bff ,#ff00c8, #ff0000 );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+
+.glow-element:hover::before{
+    opacity: 1;
+}
+
+.glow-element:active::after{
+    background: transparent;
+}
+
+.glow-element:active{
+    color: #000;
+    font-weight: bold;
 }
 
 /*#################################### estilos para header #################################*/
@@ -277,13 +329,15 @@ body{
 /*################################ card-article styles ######################*/
 .card-article{
     width: 30%;
-    background-color: white;
     margin: 1%;
-    border-radius: 15px;
+    border-radius: 12px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 0;
+    color: #fff;
 }
 
 .card-article h2{
@@ -297,6 +351,29 @@ body{
 }
 
 
+
+.card-proyect{
+    width: 30%;
+    margin: 1%;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    color: #fff;
+}
+
+.card-proyect h2{
+    width: 100%;
+    text-align: center;
+}
+
+.card-proyect p{
+    width: 100%;
+    padding: 1em;
+}
 
 .footer{
     width: 100%;
