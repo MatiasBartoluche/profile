@@ -16,6 +16,8 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    /*background-image: linear-gradient(to top right, #63B0F8, #2791F5, #096CC8, #053C70);*/
+    background-color: #161616;
 }
 
 /* ################################### estilos generales ###################################*/
@@ -259,7 +261,7 @@ body{
 /* seccion principal */
 .section{
     width: 100%;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     display: flex;
     flex-wrap: wrap;
     scroll-margin-top: 10vh;
@@ -269,6 +271,7 @@ body{
 .section h1{
     width: 100%;
     text-align: center;
+    color: #f0f0f0;
 }
 
 /*################################ card-article styles ######################*/
@@ -292,6 +295,8 @@ body{
     width: 100%;
     padding: 1em;
 }
+
+
 
 .footer{
     width: 100%;
