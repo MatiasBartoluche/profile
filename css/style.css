@@ -32,6 +32,10 @@ body{
     border: 0;
 }
 
+.social-media-button img{
+    width: 100%;
+}
+
 /* capa superior, botones inicialmente en negro */
 .custom-button{
     padding: 1em 2em;
