@@ -19,12 +19,12 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /*background-image: linear-gradient(to top right, #63B0F8, #2791F5, #096CC8, #053C70);*/
     background-color: var(--black-primary);
 }
 
 /* ################################### estilos generales ###################################*/
 
+/* botones de linkedin, mail y github */
 .social-media-button{
     width: 64px;
     height: 64px;
@@ -60,6 +60,7 @@ body{
     z-index: 0; /* para visualizar todo el boton con linear-gradient */
 }
 
+/* efecto luz neon*/
 .light-button:hover{
     box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
 }
@@ -141,7 +142,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     flex: 1 1 50%; /* Base 50%, crece y se achica */
     transition: all 0.5s ease;
 } 
@@ -170,10 +170,6 @@ body{
     justify-content: space-evenly;
 }
 
-/*#cv{
-    height: 64px;
-}*/
-
 /* contenedor de imagen */
 #image-header{
     width: 100%;
@@ -181,7 +177,6 @@ body{
     position: absolute;
     bottom: 0;
     right: 0;
-
     flex: 1 1 50%; /* Base 50%, crece y se achica */
     transition: all 0.5s ease;
 }
@@ -194,7 +189,6 @@ body{
 }
 
 /* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
-
 .header.animated-header{
     height: 10vh;
 }
@@ -250,7 +244,7 @@ body{
     transition: all 0.5s ease;
 }
 
-/* menu de navegacion*/
+/* menu vertical de navegacion*/
 .menu{
     width: 100%;
     height: auto;
