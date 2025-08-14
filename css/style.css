@@ -216,13 +216,14 @@ body{
     top: 0;
     left: 0;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* contenedor de titulo, subtitulo y botones de redes sociales */
 #title{
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -252,9 +253,11 @@ body{
 /* contenedor de botones */
 #contact-buttons{
     width: 50%;
+    height: 10vh;
     transition: width 0.5s ease, height 0.5s ease;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 /* contenedor de imagen */
@@ -281,7 +284,7 @@ body{
 }
 
 .header.animated-header #title{
-    width: 60%;
+    width: 30%;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -316,7 +319,7 @@ body{
 }
 
 .header.animated-header #image-header{
-    width: 40%;
+    width: 30%;
     height: 10vh;
 }
 
