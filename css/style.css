@@ -262,14 +262,15 @@ body{
 }
 
 .header.animated-header #title{
-    width: 50%;
+    width: 60%;
     height: 10vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .header.animated-header #title h1{
-    width: 70%;
+    width: 60%;
     max-height: fit-content;
 }
 
@@ -278,7 +279,7 @@ body{
 }
 
 .header.animated-header #contact-buttons{
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -292,10 +293,11 @@ body{
 
 .header.animated-header #cv{
     height: 32px;
+    padding: 1em;
 }
 
 .header.animated-header #image-header{
-    width: 50%;
+    width: 40%;
     height: 10vh;
 }
 
