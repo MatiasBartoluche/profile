@@ -30,10 +30,29 @@ body{
     height: 64px;
     border-radius: 50px;
     border: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-media-button img{
     width: 100%;
+}
+
+.social-media-button::after{
+    content: '';
+    position: absolute;
+    height: 107%; /* agrandar width y height para que linear-gradient sobresalga por detras del boton*/
+    width: 102%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+    z-index: -1; /* este contenedor aparecera detras del boton */
+    opacity: 0;
+}
+
+.social-media-button:hover::after{
+    opacity: 1;
 }
 
 /* capa superior, botones inicialmente en negro */
