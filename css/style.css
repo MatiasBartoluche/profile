@@ -126,6 +126,7 @@ body{
 }
 
 /*glow-circle hace alusion a la animacion, gira en circulos*/
+/*glow-circle es la clase que deberá adquirir el elemento html*/
 .glow-circle::after, .glow-circle::before{
     content: '';
     position: absolute;
@@ -151,23 +152,28 @@ body{
 }
 
 /*################################### Estilos de diferentes efectos glow ##################*/
-
+/* clases que le dan colores a los bordes de los elementos que adquieran glow-circle*/
 /* naranja de una linea de contorno */
 .glow-orange:hover::before{
     background-image: conic-gradient(from var(--angle), transparent, orange);
     opacity: 1;
+    filter: blur(0.5rem);
 }
 
 /* rojo de dos lineas de contorno */
 .glow-red:hover::before{
-    background-image: conic-gradient(from var(--angle), transparent, red, transparent, transparent, red, transparent, transparent);
+    background-image: conic-gradient(from var(--angle), transparent, red, transparent,
+                                                        red, transparent);
     opacity: 1;
+    filter: blur(0.5rem);
 }
 
 /* celeste de tres lineas de contorno */
 .glow-sky:hover::before{
-    background-image: conic-gradient(from var(--angle), transparent, #00ffd5, transparent, #00ffd5, transparent, #00ffd5, transparent);
+    background-image: conic-gradient(from var(--angle), transparent,#00ffd5, transparent,
+                                                        #00ffd5, transparent,#00ffd5, transparent);
     opacity: 1;
+    filter: blur(0.5rem);
 }
 
 /* multicolor */
