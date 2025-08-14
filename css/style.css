@@ -85,10 +85,10 @@ body{
 
 .glow-element::before{
     content: "";
-    background: linear-gradient(45deg ,#ff0000 ,#ff7300 
+    position: absolute;
+    background-image: linear-gradient(45deg ,#ff0000 ,#ff7300 
                                     ,#fffb00 ,#48ff00 ,#00ffd5
                                     ,#002bff ,#ff00c8, #ff0000 );
-    position: absolute;
     top: -2px;
     left: -2px;
     background-size: 600%;
@@ -108,10 +108,6 @@ body{
     100%{background-position: 0 0;}
 }
 
-.glow-element:hover::before{
-    opacity: 1;
-}
-
 .transparent-element:active::after{
     background: transparent;
 }
@@ -119,6 +115,68 @@ body{
 .transparent-element:active{
     color: #000;
     font-weight: bold;
+}
+
+/*################################# estilos elementos glow-red #############################*/
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/*glow-circle hace alusion a la animacion, gira en circulos*/
+.glow-circle::after, .glow-circle::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%; /* centra el cuadro rojo*/
+    z-index: -1; /* cuadro rojo por debajo*/
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+    opacity: 0;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+/*################################### Estilos de diferentes efectos glow ##################*/
+
+/* naranja de una linea de contorno */
+.glow-orange:hover::before{
+    background-image: conic-gradient(from var(--angle), transparent, orange);
+    opacity: 1;
+}
+
+/* rojo de dos lineas de contorno */
+.glow-red:hover::before{
+    background-image: conic-gradient(from var(--angle), transparent, red, transparent, transparent, red, transparent, transparent);
+    opacity: 1;
+}
+
+/* celeste de tres lineas de contorno */
+.glow-sky:hover::before{
+    background-image: conic-gradient(from var(--angle), transparent, #00ffd5, transparent, #00ffd5, transparent, #00ffd5, transparent);
+    opacity: 1;
+}
+
+/* multicolor */
+.glow-rainbow:hover::before{
+    background-image: conic-gradient(from var(--angle) ,#ff0000 ,#ff7300 
+                                    ,#fffb00 ,#48ff00 ,#00ffd5
+                                    ,#002bff ,#ff00c8, #ff0000 );
+    opacity: 1;
+    filter: blur(0.5rem);
 }
 
 /*#################################### estilos para header #################################*/
@@ -332,15 +390,11 @@ body{
 /*################################ card-article styles ######################*/
 .card-article{
     width: 30%;
-    margin: 1%;
+    background-color: var(--black-article);
     border-radius: var(--border-radius-article);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    color: var(--white-color);
+    margin: 1%;
     position: relative;
-    z-index: 0;
-    color: #fff;
 }
 
 .card-article h2{
@@ -349,8 +403,9 @@ body{
 }
 
 .card-article p{
-    width: 100%;
-    padding: 1em;
+    width: 98%;
+    padding: 1%;
+    text-align: center;    
 }
 
 /* estilos articulos de skills */
@@ -368,54 +423,19 @@ body{
     position: relative;
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-.glow-red::after, .glow-red::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    /*background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);*/
-    background-image: conic-gradient(from var(--angle), transparent, red, transparent, transparent, red, transparent, transparent);
-    translate: -50% -50%; /* centra el cuadro rojo*/
-    z-index: -1; /* cuadro rojo por debajo*/
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-    opacity: 0;
-}
-
-@keyframes spin{
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
-}
-
-.glow-red:hover::before{
-    opacity: 1;
-}
-
 /* estilos articulos de proyectos */
 .card-proyect{
     width: 30%;
-    margin: 1%;
+    background-color: var(--black-article);
     border-radius: var(--border-radius-article);
+    color: var(--white-color);
+    margin: 1%;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 0;
-    color: #fff;
+    
 }
 
 .card-proyect .img-content{
