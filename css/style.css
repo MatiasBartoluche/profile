@@ -208,16 +208,23 @@ body{
 .header{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #0e4674, #4b0a80);
+    
     color: white;
     transition: height 0.5s ease;
     z-index: 100;/* situado por arriba de los demas elementos*/
     position: fixed;
     top: 0;
     left: 0;
+}
+
+.header-container{
+    width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background: linear-gradient(to right, #0e4674, #4b0a80);
+    transition: height 0.5s ease;
 }
 
 /* contenedor de titulo, subtitulo y botones de redes sociales */
@@ -281,6 +288,14 @@ body{
 /* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
 .header.animated-header{
     height: 10vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header.animated-header .header-container{
+    height: 10vh;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .header.animated-header #title{
@@ -323,29 +338,18 @@ body{
     height: 10vh;
 }
 
-/* ############################ estilos parte central de la pagina ######################### */
-
-/* contenedor central*/
-#main-container{
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 10vh;
-    left: 0;
-    padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
-    transition: all 0.5s ease;
-}
-
 /* menu vertical de navegacion*/
 .menu{
     width: 100%;
-    height: auto;
-    background-color: var(--black-transparent);
+    display: none;
     margin: 0;
-    position: sticky;
-    top: 10vh;
-    left: 0;
-    z-index: 90;
+    transition: all 5s ease;
+}
+
+.header.animated-header .menu{
+    display: block;
+    background-color: var(--black-transparent);
+
 }
 
 .menu ul{
@@ -393,6 +397,19 @@ body{
 
 .menu ul li a:hover::after {
     width: 50%;
+}
+
+/* ############################ estilos parte central de la pagina ######################### */
+
+/* contenedor central*/
+#main-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 10vh;
+    left: 0;
+    padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
+    transition: all 0.5s ease;
 }
 
 #section-container{
