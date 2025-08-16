@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animatedHeader();
     controlarScroll();
-
-    //aaa();
 });
 
 function animatedHeader(){
@@ -51,11 +49,6 @@ function scrollController(){
     }, { passive: false });
 }
 
-
-function aaa(){
-    const opcion1 = document.getElementById('option1');
-}
-
 function controlarScroll(){
  let firstDownHandled = false; // primera vez que el usuario baja desde el top: ir exactamente a 1px
   let allowZero = false;        // tras frenar en 1, permitir 0 en el próximo intento hacia arriba
@@ -99,7 +92,6 @@ function controlarScroll(){
       allowZero = false;
     }
   }, { passive: true });
-
 
 
     // Solo aplicar el scroll suave y bloqueo al link con id=option1
