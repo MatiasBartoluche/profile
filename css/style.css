@@ -36,19 +36,22 @@ body{
     align-items: center;
 }
 
-.social-media-button img{
-    width: 100%;
-}
-
 .social-media-button::after{
     content: '';
     position: absolute;
-    height: 107%; /* agrandar width y height para que linear-gradient sobresalga por detras del boton*/
-    width: 102%;
+    height: 100%; /* agrandar width y height para que linear-gradient sobresalga por detras del boton*/
+    width: 100%;
     border-radius: 1000px;
     background-image: linear-gradient(to bottom right, #008cff, #e100ff);
     z-index: -1; /* este contenedor aparecera detras del boton */
     opacity: 0;
+    transition: width 0.5s ease, height 0.5s ease;;
+}
+
+.social-media-button img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .social-media-button:hover::after{
@@ -221,6 +224,7 @@ body{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(to right, #0e4674, #4b0a80);
@@ -367,7 +371,6 @@ body{
     padding: 1%;
     list-style: none;
     transition: background-color 0.3s ease;
-    
 }
 
 .menu ul li:hover{
