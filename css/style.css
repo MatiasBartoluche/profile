@@ -420,7 +420,7 @@ body{
     /*background-color: blueviolet;*/
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     scroll-margin-top: 10vh;
     padding-top: 3vh;
@@ -440,6 +440,10 @@ body{
     color: var(--white-color);
     margin: 1%;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .card-article h2{
@@ -447,8 +451,14 @@ body{
     text-align: center;
 }
 
+.card-article img{
+    width: 64px;
+    height: 64px;
+
+}
+
 .card-article p{
-    width: 98%;
+    width: 68%;
     padding: 1%;
     text-align: center;    
 }
