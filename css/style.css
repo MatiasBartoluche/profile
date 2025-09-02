@@ -464,7 +464,7 @@ body{
 }
 
 /* estilos articulos de skills */
-.skill-article{
+.dev-article{
     background-color: var(--black-article);
     border-radius: var(--border-radius-article);
     color: var(--white-color);
