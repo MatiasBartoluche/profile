@@ -1,8 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    animatedHeader();
-    controlarScroll();
+    //animatedHeader();
+    //controlarScroll();
+
+    openPage();
 });
+
+function openPage(){
+  let open = document.getElementById('open-page');
+  const header = document.getElementById('main-header');
+
+  open.addEventListener('click', function(){
+    header.classList.add('animated-header');
+  });
+}
 
 function animatedHeader(){
     const header = document.getElementById('main-header');
