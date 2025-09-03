@@ -201,6 +201,14 @@ body{
     filter: blur(0.5rem);
 }
 
+.glow-white:hover::before{
+    background-image: conic-gradient(from var(--angle), transparent, var(--white-color), transparent,
+                                                        var(--white-color), transparent, var(--white-color),
+                                                        transparent, var(--white-color));
+    opacity: 1;
+    filter: blur(0.5rem); 
+}
+
 /* multicolor */
 .glow-rainbow:hover::before{
     background-image: conic-gradient(from var(--angle) ,#ff0000 ,#ff7300 
@@ -272,7 +280,7 @@ body{
 /* contenedor de imagen */
 #image-header{
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
     transition: all 0.5s ease;
 }
@@ -284,6 +292,49 @@ body{
     transition: width 0.5s ease, height 0.5s ease;
 }
 
+#button-container{
+    width: 100%;
+}
+
+.open-page, .close-page {
+    
+    z-index: 0;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    height: 5%;
+    
+    padding: 15px 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, #0e4674, #4b0a80);
+}
+
+.open-page{
+    position: relative;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.close-page{
+    position: relative;
+    top: -5vh;
+    display: none;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
+}
+
+.header.animated-header .open-page{
+    display: none;
+}
+
+.header.animated-header .close-page{
+    display: block;
+
+}
+
 /* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
 .header.animated-header{
     height: 10vh;
@@ -293,14 +344,13 @@ body{
 
 .header.animated-header .header-container{
     height: 10vh;
+    display: flex;
     flex-direction: row;
 }
 
 .header.animated-header #title{
     width: 30%;
     height: 10vh;
-    display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -339,15 +389,17 @@ body{
 /* menu vertical de navegacion*/
 .menu{
     width: 100%;
+    height: 5vh;
     display: none;
     margin: 0;
     transition: all 5s ease;
 }
 
 .header.animated-header .menu{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     background-color: var(--black-transparent);
-
 }
 
 .menu ul{
@@ -403,7 +455,7 @@ body{
     width: 100%;
     height: auto;
     position: relative;
-    top: 10vh;
+    top: 15vh;
     left: 0;
     padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
     transition: all 0.5s ease;
