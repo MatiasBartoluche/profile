@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //controlarScroll();
 
     openPage();
+    closePage();
 });
 
 function openPage(){
@@ -14,6 +15,18 @@ function openPage(){
     header.classList.add('animated-header');
   });
 }
+
+function closePage(){
+  let close = document.getElementById('close-page');
+  const header = document.getElementById('main-header');
+
+  close.addEventListener('click', function(){
+    header.classList.remove('animated-header');
+  });
+}
+
+
+/*########################################################################################################*/
 
 function animatedHeader(){
     const header = document.getElementById('main-header');
@@ -29,7 +42,6 @@ function animatedHeader(){
             title.classList.remove('animated-title');
             image_header.classList.remove('animated-image-header');
             //scrollController();
-            
         }
         else if(scrollTop > lastScrollTop){
             header.classList.add('animated-header');
