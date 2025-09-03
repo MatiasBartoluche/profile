@@ -357,10 +357,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: space-evenly;
 }
 
 .menu ul li{
-    width: 23%;
     text-align: center;
     padding: 1%;
     list-style: none;
@@ -393,7 +393,7 @@ body{
 }
 
 .menu ul li a:hover::after {
-    width: 50%;
+    width: 100%;
 }
 
 /* ############################ estilos parte central de la pagina ######################### */
