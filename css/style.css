@@ -303,6 +303,8 @@ body{
     left: 45%;
     width: 10%;
     height: 5%;
+
+    border: none;
     
     padding: 15px 40px;
     color: white;
@@ -459,7 +461,6 @@ body{
     left: 0;
     padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
     transition: all 0.5s ease;
-    
 }
 
 #section-container{
@@ -500,13 +501,13 @@ body{
 
 .card-article h2{
     width: 100%;
+    margin-bottom: 0;
     text-align: center;
 }
 
 .card-article img{
     width: 64px;
     height: 64px;
-
 }
 
 .card-article p{
