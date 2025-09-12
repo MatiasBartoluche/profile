@@ -10,18 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
 function openPage(){
   let open = document.getElementById('open-page');
   const header = document.getElementById('main-header');
+  const main_container = document.getElementById('main-container');
 
   open.addEventListener('click', function(){
     header.classList.add('animated-header');
+    main_container.classList.add('animated-container');
   });
 }
 
 function closePage(){
   let close = document.getElementById('close-page');
   const header = document.getElementById('main-header');
+  const main_container = document.getElementById('main-container');
 
   close.addEventListener('click', function(){
     header.classList.remove('animated-header');
+    main_container.classList.remove('animated-container');
   });
 }
 

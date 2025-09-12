@@ -461,6 +461,11 @@ body{
     left: 0;
     padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
     transition: all 0.5s ease;
+    display: none;
+}
+
+#main-container.animated-container{
+    display: block;
 }
 
 #section-container{
