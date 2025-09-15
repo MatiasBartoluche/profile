@@ -316,9 +316,14 @@ body{
     background: linear-gradient(to left, #0e4674, #4b0a80);
 }
 
+
 .open-page{
-    position: relative;
+    position: absolute;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .close-page{
@@ -333,8 +338,10 @@ body{
 }
 
 .header.animated-header .close-page{
-    display: block;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 /* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
