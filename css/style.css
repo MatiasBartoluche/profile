@@ -321,7 +321,6 @@ body{
 
 .open-page, .close-page {
     z-index: 0;
-
     border: none;
     padding: 15px 40px;
     color: white;
@@ -630,6 +629,7 @@ body{
     border-radius: 20px;
     padding: 1%;
     background-color: var(--black-button);
+    cursor: pointer;
 }
 
 /* aplicado al icono del boton */
