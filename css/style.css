@@ -497,7 +497,7 @@ body{
     position: relative;
     top: 15vh;
     left: 0;
-    padding-bottom: 7vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
+    padding-bottom: 10vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
     transition: all 0.5s ease;
     display: none;
 }
@@ -655,6 +655,17 @@ body{
 
 .comment-container h2{
     width: 100%;
+}
+
+.form-comment{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-comment label, .form-comment input{
+    margin: 1%;
 }
 
 .new-comment{
