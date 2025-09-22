@@ -672,17 +672,40 @@ body{
     width: 70%;
 }
 
-.comments, .comment, .user-info, .text-comment{
+.comments{
     width: 100%;
 }
 
-.user-info{
+.comment{
+    margin-top: 1%;
+    margin-bottom: 1%;
     display: flex;
     flex-wrap: wrap;
 }
 
+.comment img{
+    width: 20%;
+}
+
+.content{
+    width: 80%;
+}
+
+.user-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .user-info p{
     width: 30%;
+    text-align: center;
+}
+
+.text-comment{
+    width: 98%;
+    padding: 1%;
 }
 
 .footer{

@@ -55,13 +55,16 @@ function newComment(){
         const commentContainer = document.getElementById('comments-main');
         
         commentContainer.innerHTML += "<div class='comment'>"+
-                                        "<div class='user-info'>"+
-                                            "<p>Nombre: "+newName+"</p>"+
-                                            "<p>Ocupacion: "+newJob+"</p>"+
-                                            '<p>1/1/2025</p>'+
-                                        "</div>"+
-                                        "<p class='text-comment'>"+newComment+"</p>"+
-                                    "</div>";
+                                        "<img src='./img/generic-user.png'>"+
+                                        "<div class='content'>"+
+                                            "<div class='user-info'>"+
+                                                "<p>Nombre: "+newName+"</p>"+
+                                                "<p>Ocupacion: "+newJob+"</p>"+
+                                                '<p>1/1/2025</p>'+
+                                            "</div>"+
+                                            "<p class='text-comment'>"+newComment+"</p>"+
+                                        "</div>"
+                                      "</div>";
 
         document.getElementById("nombre").value = "";
         document.getElementById("ocupacion").value = "";
