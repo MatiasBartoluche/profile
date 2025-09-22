@@ -645,6 +645,35 @@ body{
     text-align: center;
 }
 
+.comment-container{
+    width: 80%;
+    color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.comment-container h2{
+    width: 100%;
+}
+
+.new-comment{
+    width: 70%;
+}
+
+.comments, .comment, .user-info, .text-comment{
+    width: 100%;
+}
+
+.user-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-info p{
+    width: 30%;
+}
+
 .footer{
     width: 100%;
     height: 5vh;

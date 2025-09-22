@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openPage();
     closePage();
+
+    newComment();
 });
 
 function openPage(){
@@ -29,6 +31,43 @@ function closePage(){
   });
 }
 
+function newComment(){
+    document.getElementById('btn-comment-main').addEventListener('click', function () {
+        var newName = document.getElementById('nombre').value;
+        var newJob = document.getElementById('ocupacion').value;
+        var newComment = document.getElementById('new-comment-main').value;
+
+        console.log('nombre: '+newName);
+        console.log('ocupacion: '+newJob);
+
+        if(newName == ''){
+            newName = 'Unnamed';
+        }
+
+        if(newJob == ''){
+          newJob = 'Usuario';
+        }
+
+        if(newComment == ''){
+          newComment = 'Sin comentarios';
+        }
+
+        const commentContainer = document.getElementById('comments-main');
+        
+        commentContainer.innerHTML += "<div class='comment'>"+
+                                        "<div class='user-info'>"+
+                                            "<p>Nombre: "+newName+"</p>"+
+                                            "<p>Ocupacion: "+newJob+"</p>"+
+                                            '<p>1/1/2025</p>'+
+                                        "</div>"+
+                                        "<p class='text-comment'>"+newComment+"</p>"+
+                                    "</div>";
+
+        document.getElementById("nombre").value = "";
+        document.getElementById("ocupacion").value = "";
+        document.getElementById("new-comment-main").value = "";
+    });
+}
 
 /*########################################################################################################*/
 
