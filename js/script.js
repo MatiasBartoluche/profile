@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     //animatedHeader();
     //controlarScroll();
 
@@ -35,6 +34,7 @@ function newComment(){
     document.getElementById('btn-comment-main').addEventListener('click', function () {
         var newName = document.getElementById('nombre').value;
         var newJob = document.getElementById('ocupacion').value;
+        var newDate = new Date().toLocaleString();
         var newComment = document.getElementById('new-comment-main').value;
 
         console.log('nombre: '+newName);
@@ -60,7 +60,7 @@ function newComment(){
                                             "<div class='user-info'>"+
                                                 "<p>Nombre: "+newName+"</p>"+
                                                 "<p>Ocupacion: "+newJob+"</p>"+
-                                                '<p>1/1/2025</p>'+
+                                                '<p>'+newDate+'</p>'+
                                             "</div>"+
                                             "<p class='text-comment'>"+newComment+"</p>"+
                                         "</div>"
@@ -69,9 +69,27 @@ function newComment(){
         document.getElementById("nombre").value = "";
         document.getElementById("ocupacion").value = "";
         document.getElementById("new-comment-main").value = "";
+
+        saveSupabase(newName, newJob, newComment);
     });
 }
 
+
+async function saveSupabase(name, job, comment){
+    const supabaseUrl = 'https://gigpjajbicqqmlntqiog.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdpZ3BqYWpiaWNxcW1sbnRxaW9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1ODI0MjcsImV4cCI6MjA3NDE1ODQyN30.0g3yfVhnjiKMAAO9_gRcjvOSc0gzisp6GmQvzk1-fUc';
+    const supabase = window.supabase.createClient(supabaseUrl, supabaseKey)
+
+    if (!comment) return;
+
+    const { error } = await supabase.from("main-comment").insert([
+      {name: name, job: job, comment: comment }
+    ]);
+
+    if (error) {
+      console.error(error);
+    }
+}
 /*########################################################################################################*/
 
 function animatedHeader(){
