@@ -688,6 +688,11 @@ body{
     margin-bottom: 1%;
     display: flex;
     flex-wrap: wrap;
+    border-radius: var(--border-radius-article);
+}
+
+.par{
+    background-color: var(--black-article);
 }
 
 .comment img{
@@ -706,7 +711,6 @@ body{
 }
 
 .user-info p{
-    width: 33%;
     text-align: center;
 }
 
