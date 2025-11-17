@@ -100,7 +100,6 @@ async function loadComments() {
     const supabaseUrl = 'https://gigpjajbicqqmlntqiog.supabase.co'
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdpZ3BqYWpiaWNxcW1sbnRxaW9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1ODI0MjcsImV4cCI6MjA3NDE1ODQyN30.0g3yfVhnjiKMAAO9_gRcjvOSc0gzisp6GmQvzk1-fUc';
     const supabase = window.supabase.createClient(supabaseUrl, supabaseKey)
-
     const commentContainer = document.getElementById('comments-main');
 
     const { data, error } = await supabase
@@ -108,58 +107,61 @@ async function loadComments() {
         .select("*")
         .order("created_at", { ascending: true });
 
-      //commentContainer.innerHTML = "";
-
       if (error) {
         console.error(error);
         return;
       }
 
-      // variable que controlan si el comentario es par
-      var par = false;
-      // variable que inserta una class al comentario segun si es par o impar
-      var clase = "impar";
-
-      data.forEach(comment => {
-        //obtengo la fecha y hora del comentario en formato texto
-        const fechaOriginal = comment.created_at;
-
-        // convierto el texto en Date
-        const fecha = new Date(fechaOriginal);
-
-        // obtengo la fecha
-        const fechaTexto = fecha.toLocaleDateString("es-AR");
-
-        //obtengo la hora
-        const horaTexto = fecha.toLocaleTimeString("es-AR", {hour:"2-digit", minute:"2-digit"});
-
-        const fechaFinal = fechaTexto+" at "+horaTexto;
-
-        if(par){
-          clase = "par";
-          par = false;
-        }
-        else{
-          clase = "impar";
-          par = true;
-        }
-
-        commentContainer.innerHTML += "<div class='comment "+clase+"'>"+
-                                        "<img src='./img/generic-user.png'>"+
-                                        "<div class='content'>"+
-                                            "<div class='user-info'>"+
-                                                "<p>Nombre: "+comment.name+"</p>"+
-                                                "<p>Ocupacion: "+comment.job+"</p>"+
-                                                '<p>'+fechaFinal+'</p>'+
-                                            "</div>"+
-                                            "<p class='text-comment'>"+comment.comment+"</p>"+
+      if(data == 0){
+        // no hay coemntarios
+        commentContainer.innerHTML += "<div class='comment'>"+
+                                            "<h2>No hay comentarios</h2>"+
                                         "</div>"
-                                      "</div>";
-      });
+      }
+      else{
+        // variable que controlan si el comentario es par
+        var par = false;
+        // variable que inserta una class al comentario segun si es par o impar
+        var clase = "impar";
+
+        data.forEach(comment => {
+          //obtengo la fecha y hora del comentario en formato texto
+          const fechaOriginal = comment.created_at;
+          // convierto el texto en Date
+          const fecha = new Date(fechaOriginal);
+          // obtengo la fecha
+          const fechaTexto = fecha.toLocaleDateString("es-AR");
+          //obtengo la hora
+          const horaTexto = fecha.toLocaleTimeString("es-AR", {hour:"2-digit", minute:"2-digit"});
+          const fechaFinal = fechaTexto+" at "+horaTexto;
+
+          if(par){
+            clase = "par";
+            par = false;
+          }
+          else{
+            clase = "impar";
+            par = true;
+          }
+
+          commentContainer.innerHTML += "<div class='comment "+clase+"'>"+
+                                          "<img src='./img/generic-user.png'>"+
+                                          "<div class='content'>"+
+                                              "<div class='user-info'>"+
+                                                  "<p>Nombre: "+comment.name+"</p>"+
+                                                  "<p>Ocupacion: "+comment.job+"</p>"+
+                                                  '<p>'+fechaFinal+'</p>'+
+                                              "</div>"+
+                                              "<p class='text-comment'>"+comment.comment+"</p>"+
+                                          "</div>"
+                                        "</div>";
+        });
+      }
 }
 
 /*########################################################################################################*/
 
+/*
 function animatedHeader(){
     const header = document.getElementById('main-header');
     const title = document.getElementById('title');
@@ -273,3 +275,5 @@ function controlarScroll(){
         });
     }
 }
+
+*/
