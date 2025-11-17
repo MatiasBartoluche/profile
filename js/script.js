@@ -132,7 +132,9 @@ async function loadComments() {
           // obtengo la fecha
           const fechaTexto = fecha.toLocaleDateString("es-AR");
           //obtengo la hora
-          const horaTexto = fecha.toLocaleTimeString("es-AR", {hour:"2-digit", minute:"2-digit"});
+          const horaTexto = fecha.toLocaleTimeString("es-AR", {hour:"2-digit",
+                                                              minute:"2-digit",
+                                                              hour12: false});
           const fechaFinal = fechaTexto+" at "+horaTexto;
 
           if(par){
