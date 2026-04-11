@@ -8,14 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
     //newComment();
     //loadComments();
 
-    var skill_article = document.getElementById('first-section');
+    var section1 = document.getElementById('first-section');
+    var section2 = document.getElementById('second-section');
+    var section3 = document.getElementById('thirth-section');
+    var section4 = document.getElementById('fourth-section');
+
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
-    // insertando article en la primer seccion
-    insertSkillArticle(skill_article, 'Article 1', './img/card.png', informacion);
-    insertSkillArticle(skill_article, 'Article 2', './img/card.png', informacion);
-    insertSkillArticle(skill_article, 'Article 3', './img/card.png', informacion);
-    insertSkillArticle(skill_article, 'Article 4', './img/card.png', informacion);
+    // insertando article en la seccion soft skills
+    insertSkillArticle(section1, 'Article 1', './img/card.png', informacion);
+    insertSkillArticle(section1, 'Article 2', './img/card.png', informacion);
+    insertSkillArticle(section1, 'Article 3', './img/card.png', informacion);
+    insertSkillArticle(section1, 'Article 4', './img/card.png', informacion);
+
+    // insertando articulos en la seccion dev skills
+
+    insertDevArticle(section2, './img/java.png', 'Java');
+    insertDevArticle(section2, './img/java.png', 'Java');
+    insertDevArticle(section2, './img/java.png', 'Java');
 
 });
 
@@ -171,8 +181,8 @@ async function loadComments() {
       }
 }
 
-// funcion que inserta articulos
-// ontainer = contenedor donde se va a insertar el articulo
+// funcion que inserta articulos de soft skills
+// container = contenedor donde se va a insertar el articulo
 // title = tilulo del articulo
 // image = ruta del archivo de imagen (debe introducirse en formato texto)
 // info = informacion del articulo
@@ -185,4 +195,18 @@ function insertSkillArticle(container, title, image, info){
                             "<img src='"+image+"'>"+
                             "<p>"+info+"</p>"+
                           "</article>"
+}
+
+// funcion que inserta articulos de programacion
+// container = contenedor donse se va a instalar el articulo
+// image = imagen del articulo
+// title = titulo del articulo
+
+function insertDevArticle(container, image, title){
+  var contenedor = container;
+
+  contenedor.innerHTML += "<article class='dev-article glow-circle glow-red'>"+
+                            "<img src="+image+">"+
+                            "<p>"+title+"</p>"+
+                          "</article>";
 }
