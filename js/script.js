@@ -22,10 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSkillArticle(section1, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion dev skills
+    insertDevArticle(section2, './img/java.png', 'Java');
+    insertDevArticle(section2, './img/java.png', 'Java');
+    insertDevArticle(section2, './img/java.png', 'Java');
 
-    insertDevArticle(section2, './img/java.png', 'Java');
-    insertDevArticle(section2, './img/java.png', 'Java');
-    insertDevArticle(section2, './img/java.png', 'Java');
+    // insertando articulos en la seccion 3
+    insertSkillArticle(section3, 'Article 1', './img/card.png', informacion);
+    insertSkillArticle(section3, 'Article 2', './img/card.png', informacion);
+    insertSkillArticle(section3, 'Article 3', './img/card.png', informacion);
+    insertSkillArticle(section3, 'Article 4', './img/card.png', informacion);
 
 });
 
