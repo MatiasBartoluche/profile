@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSkillArticle(section3, 'Article 3', './img/card.png', informacion);
     insertSkillArticle(section3, 'Article 4', './img/card.png', informacion);
 
+    // insertando articulos en la seccion de proyectos
+    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 1', informacion);
+    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 2', informacion);
+    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 3', informacion);
+    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 4', informacion);
+    
 });
 
 function openPage(){
@@ -188,10 +194,9 @@ async function loadComments() {
 
 // funcion que inserta articulos de soft skills
 // container = contenedor donde se va a insertar el articulo
-// title = tilulo del articulo
-// image = ruta del archivo de imagen (debe introducirse en formato texto)
-// info = informacion del articulo
-
+// title = String - tilulo del articulo
+// image = String - ruta del archivo de imagen (debe introducirse en formato texto)
+// info = String - informacion del articulo
 function insertSkillArticle(container, title, image, info){
   var contenedor = container;
 
@@ -204,14 +209,47 @@ function insertSkillArticle(container, title, image, info){
 
 // funcion que inserta articulos de programacion
 // container = contenedor donse se va a instalar el articulo
-// image = imagen del articulo
-// title = titulo del articulo
-
+// image = String - ruta de la imagen del articulo
+// title = String - titulo del articulo
 function insertDevArticle(container, image, title){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='dev-article glow-circle glow-red'>"+
                             "<img src="+image+">"+
                             "<p>"+title+"</p>"+
+                          "</article>";
+}
+
+
+// funcion que inserta articulos de proyectos
+// container = contenedor donde se insertaran los articulos
+// image = String - ruta del archivo de imagen
+// title = String - titulo del articulo
+// description = String - descripcion del articulo
+function insertProyectArticle(container, image, title, description){
+  var contenedor = container;
+
+  contenedor.innerHTML += "<article class='card-proyect glow-circle glow-rainbow'>"+
+                              "<div class='img-content'>"+
+                                  "<img src='"+image+"'>"+
+                              "</div>"+
+                              "<h2>"+title+"</h2>"+
+                              "<p>"+description+"</p>"+
+                              "<div class='proyect-buttons'>"+
+                                  "<a class='custom-button light-button'>"+
+                                      "<img src='./img/details-white.png'>"+
+                                      "<p>Details</p>"+
+                                  "</a>"+
+                                  
+                                  "<a class='custom-button light-button'>"+
+                                      "<img src='./img/internet-white.png'>"+
+                                      "<p>Visit page</p>"+
+                                  "</a>"+
+                                  
+                                  "<a class='custom-button light-button'>"+
+                                      "<img src='./img/github.png'>"+
+                                      "<p>Github</p>"+
+                                  "</a>"+
+                              "</div>"+
                           "</article>";
 }
