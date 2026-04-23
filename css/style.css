@@ -563,6 +563,18 @@ body{
     text-align: center;    
 }
 
+.education-article{
+    width: 25%;
+}
+
+.education-article img{
+    width: 30%;
+}
+
+.education-info{
+    width: 70%;
+}
+
 /* estilos articulos de skills */
 .dev-article{
     padding: 1%;
