@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
     // insertando article en la seccion soft skills
-    insertSkillArticle(section1, 'Article 1', './img/card.png', informacion);
-    insertSkillArticle(section1, 'Article 2', './img/card.png', informacion);
-    insertSkillArticle(section1, 'Article 3', './img/card.png', informacion);
-    insertSkillArticle(section1, 'Article 4', './img/card.png', informacion);
+    insertPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
+    insertPresentationArticle(section1, 'Article 2', './img/card.png', informacion);
+    insertPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
+    insertPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion dev skills
     insertDevArticle(section3, './img/java.png', 'Java');
@@ -198,7 +198,7 @@ async function loadComments() {
 // title = String - tilulo del articulo
 // image = String - ruta del archivo de imagen (debe introducirse en formato texto)
 // info = String - informacion del articulo
-function insertSkillArticle(container, title, image, info){
+function insertPresentationArticle(container, title, image, info){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-orange'>"+
@@ -221,6 +221,20 @@ function insertDevArticle(container, image, title){
                           "</article>";
 }
 
+// funcion que inserta articulos de soft skills
+// container = contenedor donde se va a insertar el articulo
+// title = String - tilulo del articulo
+// image = String - ruta del archivo de imagen (debe introducirse en formato texto)
+// info = String - informacion del articulo
+function insertSkillArticle(container, title, image, info){
+  var contenedor = container;
+
+  contenedor.innerHTML += "<article class='card-article glow-circle glow-sky'>"+
+                            "<h2>"+title+"</h2>"+
+                            "<img src='"+image+"'>"+
+                            "<p>"+info+"</p>"+
+                          "</article>"
+}
 
 // funcion que inserta articulos de proyectos
 // container = contenedor donde se insertaran los articulos
