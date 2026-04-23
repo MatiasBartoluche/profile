@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var section2 = document.getElementById('second-section');
     var section3 = document.getElementById('thirth-section');
     var section4 = document.getElementById('fourth-section');
+    var section5 = document.getElementById('fifth-section');
 
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
@@ -22,21 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSkillArticle(section1, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion dev skills
-    insertDevArticle(section2, './img/java.png', 'Java');
-    insertDevArticle(section2, './img/java.png', 'Java');
-    insertDevArticle(section2, './img/java.png', 'Java');
+    insertDevArticle(section3, './img/java.png', 'Java');
+    insertDevArticle(section3, './img/java.png', 'Java');
+    insertDevArticle(section3, './img/java.png', 'Java');
 
     // insertando articulos en la seccion 3
-    insertSkillArticle(section3, 'Article 1', './img/card.png', informacion);
-    insertSkillArticle(section3, 'Article 2', './img/card.png', informacion);
-    insertSkillArticle(section3, 'Article 3', './img/card.png', informacion);
-    insertSkillArticle(section3, 'Article 4', './img/card.png', informacion);
+    insertSkillArticle(section4, 'Article 1', './img/card.png', informacion);
+    insertSkillArticle(section4, 'Article 2', './img/card.png', informacion);
+    insertSkillArticle(section4, 'Article 3', './img/card.png', informacion);
+    insertSkillArticle(section4, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion de proyectos
-    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 1', informacion);
-    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 2', informacion);
-    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 3', informacion);
-    insertProyectArticle(section4, './img/default-proyect.jpg', 'Proyect 4', informacion);
+    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion);
+    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 2', informacion);
+    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 3', informacion);
+    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 4', informacion);
     
 });
 
