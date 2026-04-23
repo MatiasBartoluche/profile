@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     insertPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
     insertPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
 
+    // insertando archivos en la seccion education
+    insertEducationArticle(section2, './img/diploma.png', 'Article 1', 'description');
+    insertEducationArticle(section2, './img/diploma.png', 'Article 2', 'description');
+    insertEducationArticle(section2, './img/diploma.png', 'Article 3', 'description');
+    insertEducationArticle(section2, './img/diploma.png', 'Article 4', 'description');
+
     // insertando articulos en la seccion dev skills
     insertDevArticle(section3, './img/java.png', 'Java');
     insertDevArticle(section3, './img/java.png', 'Java');
@@ -206,6 +212,23 @@ function insertPresentationArticle(container, title, image, info){
                             "<img src='"+image+"'>"+
                             "<p>"+info+"</p>"+
                           "</article>"
+}
+
+// funcion que inserta articulos de education
+// container = contenedor donde se va a insertar el articulo
+//title = String - tituli del articulo
+// image = String - ruta del archivo imagen
+// info = String - informacion del articulo
+function insertEducationArticle(container, image, title, info){
+  var contenedor = container;
+
+  contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-red'>"+
+                            "<img src='"+image+"'>"+
+                            "<div class='education-info'>"+
+                                "<h2>"+title+"</h2>"+
+                                "<p>"+info+"</p>"+
+                            "</div>"+
+                          "</article>";
 }
 
 // funcion que inserta articulos de programacion
