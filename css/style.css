@@ -344,11 +344,16 @@ body{
     left: 45%;
     width: 10%;
     height: 5%;
-    transition: filter 0.5s ease;
+    animation: neonWhite 2s infinite
 }
 
-.trapecio-wrapper:hover {
-  filter: drop-shadow(0 0 8px white);
+@keyframes neonWhite {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px white);
+    }
+    50% {
+        filter: drop-shadow(0 0 0px white);
+    }
 }
 
 /* trapecio invertido */
