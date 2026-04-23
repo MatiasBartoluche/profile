@@ -222,7 +222,7 @@ function insertPresentationArticle(container, title, image, info){
 function insertEducationArticle(container, image, title, info){
   var contenedor = container;
 
-  contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-red'>"+
+  contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-blue'>"+
                             "<img src='"+image+"'>"+
                             "<div class='education-info'>"+
                                 "<h2>"+title+"</h2>"+
@@ -238,7 +238,7 @@ function insertEducationArticle(container, image, title, info){
 function insertDevArticle(container, image, title){
   var contenedor = container;
 
-  contenedor.innerHTML += "<article class='card-article dev-article glow-circle glow-red'>"+
+  contenedor.innerHTML += "<article class='card-article dev-article glow-circle glow-sky'>"+
                             "<img src="+image+">"+
                             "<p>"+title+"</p>"+
                           "</article>";
@@ -252,7 +252,7 @@ function insertDevArticle(container, image, title){
 function insertSkillArticle(container, title, image, info){
   var contenedor = container;
 
-  contenedor.innerHTML += "<article class='card-article glow-circle glow-sky'>"+
+  contenedor.innerHTML += "<article class='card-article glow-circle glow-green'>"+
                             "<h2>"+title+"</h2>"+
                             "<img src='"+image+"'>"+
                             "<p>"+info+"</p>"+
