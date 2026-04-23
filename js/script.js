@@ -215,7 +215,7 @@ function insertPresentationArticle(container, title, image, info){
 function insertDevArticle(container, image, title){
   var contenedor = container;
 
-  contenedor.innerHTML += "<article class='dev-article glow-circle glow-red'>"+
+  contenedor.innerHTML += "<article class='card-article dev-article glow-circle glow-red'>"+
                             "<img src="+image+">"+
                             "<p>"+title+"</p>"+
                           "</article>";
