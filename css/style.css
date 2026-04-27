@@ -526,8 +526,25 @@ body{
 
 #div-color div{
     width: 33%;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+}
+
+#protanopia{
+    background-color: #DDAA33;
+    color:#004488;
+}
+
+#deuteranopia{
+    background-color: #058ed9;
+    color: #ff934f;
+}
+
+#tritanopia{
+    background-color: #D55E00;
+    color: #009E73;
 }
 
 /* ############################ estilos parte central de la pagina ######################### */
