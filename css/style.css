@@ -500,6 +500,36 @@ body{
     width: 100%;
 }
 
+/*############################# estilos para la seccion toogle y paleta de colores ######### */
+#toogle-tools{
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 18%;
+    right: 0;
+    background: white;
+    z-index: 90;
+}
+
+#div-toogle, #div-color{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#div-toogle div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#div-color div{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
 /* ############################ estilos parte central de la pagina ######################### */
 
 /* contenedor central*/
