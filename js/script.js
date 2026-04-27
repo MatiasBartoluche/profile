@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 2', informacion);
     insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 3', informacion);
     insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 4', informacion);
-    
 });
 
 function openPage(){
@@ -68,7 +67,6 @@ function closePage(){
     main_container.classList.remove('animated-container');
   });
 }
-
 
 // funcion que captura datos del formulario y lo inserta en la pagina
 function newComment(){
