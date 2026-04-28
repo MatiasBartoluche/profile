@@ -93,6 +93,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease, height 0.5s ease;
+    text-decoration: none;
 }
 
 /* capa inferior, para que el boton simule un border con linear-gradient */
@@ -663,6 +664,23 @@ body{
     text-align: center;
 }
 
+
+.warning-article{
+    width: 50%;
+}
+
+.warning-article p{
+    width: 100%;
+    font-size: large;
+}
+
+.warning-article a{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+
+/* ############################# estilos para el formulario de comentarios ################## */
 .comment-container{
     width: 80%;
     color: var(--white-color);

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addSkillArticle(section4, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion de proyectos
-  var links = {info: './pages/info-principal.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
+  var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
 
     addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
 });
