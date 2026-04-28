@@ -277,6 +277,11 @@ body{
     background: linear-gradient(to right, #0e4674, #4b0a80);
 }
 
+#main-header{
+    /* ocultar header hasta que se cargue la pagina desde el javascript */
+    visibility: hidden;
+}
+
 .header-container{
     width: 100%;
     height: 100vh;
