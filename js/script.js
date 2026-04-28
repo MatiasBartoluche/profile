@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if(state === 'open'){
         // al recargar la pagina, pregunto si antes estaba "abierta"
         // en ese caso, recargo la pagina ya abierta
-        header.classList.add('animated-header');
-        main_container.classList.add('animated-container');
+        header.classList.add('small-header');
+        main_container.classList.add('expand');
     }
 
     openPage();
@@ -61,8 +61,8 @@ function openPage(){
   const main_container = document.getElementById('main-container');
 
   open.addEventListener('click', function(){
-    header.classList.add('animated-header');
-    main_container.classList.add('animated-container');
+    header.classList.add('small-header');
+    main_container.classList.add('expand');
     //guardar estado "abierto" de la pagina
     localStorage.setItem('pageState', 'open');
   });
@@ -74,8 +74,8 @@ function closePage(){
   const main_container = document.getElementById('main-container');
 
   close.addEventListener('click', function(){
-    header.classList.remove('animated-header');
-    main_container.classList.remove('animated-container');
+    header.classList.remove('small-header');
+    main_container.classList.remove('expand');
     //guardar estado "cerrado" de la pagina
     localStorage.setItem('pageState', 'closed');
   });
