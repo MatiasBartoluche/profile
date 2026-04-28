@@ -17,32 +17,32 @@ document.addEventListener("DOMContentLoaded", function () {
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
     // insertando article en la seccion soft skills
-    insertPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
-    insertPresentationArticle(section1, 'Article 2', './img/card.png', informacion);
-    insertPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
-    insertPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
+    addtPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
+    addPresentationArticle(section1, 'Article 2', './img/card.png', informacion);
+    addPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
+    addPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
 
     // insertando archivos en la seccion education
-    insertEducationArticle(section2, './img/diploma.png', 'Article 1', 'description');
-    insertEducationArticle(section2, './img/diploma.png', 'Article 2', 'description');
-    insertEducationArticle(section2, './img/diploma.png', 'Article 3', 'description');
-    insertEducationArticle(section2, './img/diploma.png', 'Article 4', 'description');
+    addEducationArticle(section2, './img/diploma.png', 'Article 1', 'description');
+    addEducationArticle(section2, './img/diploma.png', 'Article 2', 'description');
+    addEducationArticle(section2, './img/diploma.png', 'Article 3', 'description');
+    addEducationArticle(section2, './img/diploma.png', 'Article 4', 'description');
 
     // insertando articulos en la seccion dev skills
-    insertDevArticle(section3, './img/java.png', 'Java');
-    insertDevArticle(section3, './img/java.png', 'Java');
-    insertDevArticle(section3, './img/java.png', 'Java');
+    addDevArticle(section3, './img/java.png', 'Java');
+    addDevArticle(section3, './img/java.png', 'Java');
+    addDevArticle(section3, './img/java.png', 'Java');
 
     // insertando articulos en la seccion 3
-    insertSkillArticle(section4, 'Article 1', './img/card.png', informacion);
-    insertSkillArticle(section4, 'Article 2', './img/card.png', informacion);
-    insertSkillArticle(section4, 'Article 3', './img/card.png', informacion);
-    insertSkillArticle(section4, 'Article 4', './img/card.png', informacion);
+    addSkillArticle(section4, 'Article 1', './img/card.png', informacion);
+    addSkillArticle(section4, 'Article 2', './img/card.png', informacion);
+    addSkillArticle(section4, 'Article 3', './img/card.png', informacion);
+    addSkillArticle(section4, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion de proyectos
   var links = {info: './pages/info-principal.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
 
-    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
+    addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
 });
 
 function openPage(){
@@ -201,7 +201,7 @@ async function loadComments() {
 // title = String - tilulo del articulo
 // image = String - ruta del archivo de imagen (debe introducirse en formato texto)
 // info = String - informacion del articulo
-function insertPresentationArticle(container, title, image, info){
+function addPresentationArticle(container, title, image, info){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-orange'>"+
@@ -216,7 +216,7 @@ function insertPresentationArticle(container, title, image, info){
 //title = String - tituli del articulo
 // image = String - ruta del archivo imagen
 // info = String - informacion del articulo
-function insertEducationArticle(container, image, title, info){
+function addEducationArticle(container, image, title, info){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-blue'>"+
@@ -232,7 +232,7 @@ function insertEducationArticle(container, image, title, info){
 // container = contenedor donse se va a instalar el articulo
 // image = String - ruta de la imagen del articulo
 // title = String - titulo del articulo
-function insertDevArticle(container, image, title){
+function addDevArticle(container, image, title){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article dev-article glow-circle glow-sky'>"+
@@ -246,7 +246,7 @@ function insertDevArticle(container, image, title){
 // title = String - tilulo del articulo
 // image = String - ruta del archivo de imagen (debe introducirse en formato texto)
 // info = String - informacion del articulo
-function insertSkillArticle(container, title, image, info){
+function addSkillArticle(container, title, image, info){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-green'>"+
@@ -262,7 +262,7 @@ function insertSkillArticle(container, title, image, info){
 // title = String - titulo del articulo
 // description = String - descripcion del articulo
 // links = object - objeto que consta de tres atributos string, links para botones
-function insertProyectArticle(container, image, title, description, links){
+function addProyectArticle(container, image, title, description, links){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-proyect glow-circle glow-rainbow'>"+
