@@ -250,6 +250,19 @@ body{
     filter: blur(0.5rem);
 }
 
+/* efecto luz neon intermitente */
+.glow-white-infinite{
+    animation: neonWhite 2s infinite;
+}
+
+@keyframes neonWhite {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px white);
+    }
+    50% {
+        filter: drop-shadow(0 0 0px white);
+    }
+}
 /*#################################### estilos para header #################################*/
 .header{
     width: 100%;
@@ -353,17 +366,6 @@ body{
     left: 45%;
     width: 10%;
     height: 5%;
-    animation: neonWhite 2s infinite;
-}
-
-/* efecto luz neon intermitente */
-@keyframes neonWhite {
-    0%, 100% {
-        filter: drop-shadow(0 0 8px white);
-    }
-    50% {
-        filter: drop-shadow(0 0 0px white);
-    }
 }
 
 /* trapecio invertido */
