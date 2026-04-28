@@ -20,6 +20,16 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: var(--black-primary);
+    /*visibility: hidden;*/
+}
+
+/*body.ready {
+  visibility: visible;
+}*/
+
+.no-transition {
+  transition: none !important;
+  animation: none !important;
 }
 
 /* ################################### estilos generales ###################################*/

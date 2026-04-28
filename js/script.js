@@ -1,9 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    //animatedHeader();
-    //controlarScroll();
+    const header = document.getElementById('main-header');
+    const main_container = document.getElementById('main-container');
+
+    // recupero estado de "abierto" o "cerrado" de la pagina
+    const state = localStorage.getItem('pageState');
+
+    if(state === 'open'){
+        // al recargar la pagina, pregunto si antes estaba "abierta"
+        // en ese caso, recargo la pagina ya abierta
+        header.classList.add('animated-header');
+        main_container.classList.add('animated-container');
+    }
 
     openPage();
     closePage();
+  
+    //animatedHeader();
+    //controlarScroll();
 
     //newComment();
     //loadComments();
@@ -40,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addSkillArticle(section4, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion de proyectos
-  var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
+    var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
 
     addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
 });
@@ -53,6 +66,8 @@ function openPage(){
   open.addEventListener('click', function(){
     header.classList.add('animated-header');
     main_container.classList.add('animated-container');
+    //guardar estado "abierto" de la pagina
+    localStorage.setItem('pageState', 'open');
   });
 }
 
@@ -64,6 +79,8 @@ function closePage(){
   close.addEventListener('click', function(){
     header.classList.remove('animated-header');
     main_container.classList.remove('animated-container');
+    //guardar estado "cerrado" de la pagina
+    localStorage.setItem('pageState', 'closed');
   });
 }
 
