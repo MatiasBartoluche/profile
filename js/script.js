@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openPage();
     closePage();
-  
-    //animatedHeader();
-    //controlarScroll();
 
     //newComment();
     //loadComments();
