@@ -40,10 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSkillArticle(section4, 'Article 4', './img/card.png', informacion);
 
     // insertando articulos en la seccion de proyectos
-    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion);
-    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 2', informacion);
-    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 3', informacion);
-    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 4', informacion);
+  var links = {info: './pages/info-principal.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
+
+    insertProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
 });
 
 function openPage(){
@@ -262,7 +261,8 @@ function insertSkillArticle(container, title, image, info){
 // image = String - ruta del archivo de imagen
 // title = String - titulo del articulo
 // description = String - descripcion del articulo
-function insertProyectArticle(container, image, title, description){
+// links = object - objeto que consta de tres atributos string, links para botones
+function insertProyectArticle(container, image, title, description, links){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-proyect glow-circle glow-rainbow'>"+
@@ -272,17 +272,17 @@ function insertProyectArticle(container, image, title, description){
                               "<h2>"+title+"</h2>"+
                               "<p>"+description+"</p>"+
                               "<div class='proyect-buttons'>"+
-                                  "<a class='custom-button light-button'>"+
+                                  "<a class='custom-button light-button' href='"+links.info+"'>"+
                                       "<img src='./img/details-white.png'>"+
                                       "<p>Details</p>"+
                                   "</a>"+
                                   
-                                  "<a class='custom-button light-button'>"+
+                                  "<a class='custom-button light-button' href='"+links.page+"'>"+
                                       "<img src='./img/internet-white.png'>"+
                                       "<p>Visit page</p>"+
                                   "</a>"+
                                   
-                                  "<a class='custom-button light-button'>"+
+                                  "<a class='custom-button light-button' href='"+links.github+"'>"+
                                       "<img src='./img/github.png'>"+
                                       "<p>Github</p>"+
                                   "</a>"+
