@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
     // insertando article en la seccion soft skills
-    addtPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
+    addPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
     addPresentationArticle(section1, 'Article 2', './img/card.png', informacion);
     addPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
     addPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
