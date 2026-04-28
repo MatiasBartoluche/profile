@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
     const header = document.getElementById('main-header');
     const main_container = document.getElementById('main-container');
 
@@ -11,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add('small-header');
         main_container.classList.add('expand');
     }
-    /* pagina cargada, mostrar el header */
-    header.style.visibility = 'visible';
 
     openPage();
     closePage();

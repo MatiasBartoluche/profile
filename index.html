@@ -6,6 +6,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Matiías Bartoluche</title>
+
+    <!-- script necesario para evitar parmadeo de pagina
+     y evitar visualizar la animacion del header al recargar pagina-->
+    <script>
+    (function() {
+        const state = localStorage.getItem('pageState');
+
+        if (state === 'open') {
+            document.documentElement.classList.add('page-open');
+        }
+    })();
+    </script>
+
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
 

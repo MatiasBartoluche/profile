@@ -20,7 +20,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-color: var(--black-primary);
-    /*visibility: hidden;*/
 }
 
 /* ################################### estilos generales ###################################*/
@@ -281,9 +280,9 @@ body{
     transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-#main-header{
-    /* ocultar header hasta que se cargue la pagina desde el javascript */
-    visibility: hidden;
+/* estado abierto desde el inicio */
+.page-open .header {
+    transform: scaleY(0.1);
 }
 
 .header-inner{
@@ -300,7 +299,6 @@ body{
 .header-container{
     width: 100%;
     height: 100vh;
-    /*transition: height 0.5s ease;*/
     display: flex;
     flex-direction: column;
 }
@@ -310,7 +308,6 @@ body{
     width: 100%;
     height: 40vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
-    /*transition: all 0.5s ease;*/
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -321,7 +318,6 @@ body{
     margin: 0;
     width: 100%;
     text-align: center;
-    /*transition: width 0.5s ease, height 0.5s ease;*/
 }
 
 #title h2 {
@@ -329,14 +325,12 @@ body{
     margin: 0.5em 0 0;
     width: 100%;
     text-align: center;
-    /*transition: width 0.5s ease, height 0.5s ease;*/
 }
 
 /* contenedor de botones */
 #contact-buttons{
     width: 50%;
     height: 10vh;
-    /*transition: width 0.5s ease, height 0.5s ease;*/
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -348,14 +342,12 @@ body{
     width: 100%;
     height: 45vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
-    /*transition: all 0.5s ease;*/
 }
 
 #image-header img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para llenar su contenedor */
-    /*transition: width 0.5s ease, height 0.5s ease;*/
 }
 
 #button-container{
@@ -471,7 +463,6 @@ body{
     top: 10vh;
     left: 0;
     padding-bottom: 10vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
-    /*transition: all 0.5s ease;*/
     display: none;
 }
 
@@ -508,7 +499,6 @@ body{
     text-align: center;
     padding: 1%;
     list-style: none;
-    /*transition: background-color 0.3s ease;*/
 }
 
 .menu ul li:hover{
@@ -520,7 +510,6 @@ body{
     display: inline-block;
     color: var(--white-color);
     text-decoration: none;
-    /*transition: color 0.3s ease;*/
     width: 100%;
 }
 
@@ -547,7 +536,6 @@ body{
 /* seccion principal */
 .section{
     width: 100%;
-    /*background-color: blueviolet;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
