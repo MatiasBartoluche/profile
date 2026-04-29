@@ -482,7 +482,7 @@ body{
     position: sticky;
     top: 10vh;
     margin: 0;
-    z-index: 100;
+    z-index: 90;
 }
 
 .menu ul{
