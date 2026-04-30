@@ -64,6 +64,8 @@ function openPage(){
   open.addEventListener('click', function(){
     header.classList.add('small-header');
     main_container.classList.add('expand');
+    // elimina estado inicial
+    document.documentElement.classList.add('page-open');
     //guardar estado "abierto" de la pagina
     localStorage.setItem('pageState', 'open');
   });
@@ -77,6 +79,8 @@ function closePage(){
   close.addEventListener('click', function(){
     header.classList.remove('small-header');
     main_container.classList.remove('expand');
+    // elimina estado inicial
+    document.documentElement.classList.remove('page-open');
     //guardar estado "cerrado" de la pagina
     localStorage.setItem('pageState', 'closed');
   });
