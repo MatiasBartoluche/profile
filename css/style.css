@@ -391,6 +391,10 @@ body{
     bottom: 0;
 }
 
+#trapecio-close img{
+    height: 25px;
+}
+
 /* estado abierto desde el inicio, este estilo aplica al <html> */
 .page-open .header {
     transform: scaleY(0.1);
@@ -493,6 +497,7 @@ body{
     background-color: var(--black-transparent);
     position: sticky;
     top: 10vh;
+    padding-top: 2vh;
     margin: 0;
     z-index: 90;
 }
