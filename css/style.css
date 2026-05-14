@@ -600,7 +600,8 @@ body{
 }
 
 .education-info p{
-    width: 70%;
+    width: 68%;
+    margin: 1%;
 }
 
 /* estilos articulos de skills */
