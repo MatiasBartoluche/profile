@@ -290,12 +290,19 @@ function addProyectArticle(container, image, title, description, links){
                               "</div>"+
                               "<h2>"+title+"</h2>"+
                               "<p>"+description+"</p>"+
+                              "<div class='keyworlds'>"+
+                                  "<p>Keyworlds: </p>"+
+                                  "<p class='html'>HTML</p>"+
+                                  "<p class='css'>CSS</p>"+
+                                  "<p class='javascript'>JavaScript</p>"+
+                              "</div>"+
+
                               "<div class='proyect-buttons'>"+
                                   "<a class='custom-button light-button' href='"+links.info+"'>"+
                                       "<img src='./img/details-white.png'>"+
                                       "<p>Details</p>"+
                                   "</a>"+
-                                  
+                        
                                   "<a class='custom-button light-button' href='"+links.page+"'>"+
                                       "<img src='./img/internet-white.png'>"+
                                       "<p>Visit page</p>"+
