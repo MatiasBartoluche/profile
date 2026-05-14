@@ -45,11 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
     addDevArticle(section3, './img/jquery.png', 'JQuery');
     addDevArticle(section3, './img/java.png', 'Java');
 
-    // insertando articulos en la seccion 3
-    addSkillArticle(section4, 'Article 1', './img/card.png', informacion);
-    addSkillArticle(section4, 'Article 2', './img/card.png', informacion);
-    addSkillArticle(section4, 'Article 3', './img/card.png', informacion);
-    addSkillArticle(section4, 'Article 4', './img/card.png', informacion);
+    // insertando articulos en la seccion skills
+    var uml_info = 'Lenguaje unificado de modelad. Visualizar, construir y documentar estructuras de software.';
+    var der_info = "Diagrama entidad-relacion. Visualizar, construir y documentar bases de datos. Aplicacion de las tres formas normales para evitar redundancias.";
+    var scrum = 'Metodología ágil utilizada para gestionar proyectos mediante iteraciones cortas. Organización del equipo, inspección frecuente y adaptación para mejorar continuamente.';
+    var equipo = 'Comunicación y colaboracion con los integrandes del grupo, intercambiar opiniones y diferentes puntos de vista para lograr resultados.';
+    var gestion = 'Captura de requisitos, alcance del proyecto, riesgos, diagramas y arquitecturas aplicadas a un proyecto.';
+    var detalle = 'Minucioso y detallista en las tareas que realizo. Enfocado en el orden y en nuevas maneras de realizar las actividades de forma óptima.';
+    addSkillArticle(section4, 'UML', './img/uml.png', uml_info);
+    addSkillArticle(section4, 'DER / normalizacion', './img/der.png', der_info);
+    addSkillArticle(section4, 'Trabajo en equipo', './img/equipo.png', equipo);
+    addSkillArticle(section4, 'Scrum', './img/scrum.png', scrum);
+    addSkillArticle(section4, 'Gestión de proyecto', './img/gestion.png', gestion);
+    addSkillArticle(section4, 'Atencioón al detalle', './img/detalle.png', detalle);
 
     // insertando articulos en la seccion de proyectos
     var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};

@@ -557,7 +557,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     scroll-margin-top: 10vh;
     padding-top: 4vh;
 }
@@ -596,7 +596,8 @@ body{
 }
 
 .info-container img{
-    width: 30%;
+    width: 28%;
+    padding: 1%;
     height: fit-content;
 }
 
