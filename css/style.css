@@ -656,6 +656,40 @@ body{
     padding: 1em;
 }
 
+/* estilos para el div que contiene los keyworld referentes a las tecnologias del proyecto */
+.keyworlds{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.keyworlds .keys{
+    width: 27%;
+}
+
+.keyworlds p{
+    width: auto;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.html{
+    background-color: #F54927;
+}
+
+.css{
+    background-color: #27B0F5;
+}
+
+.javascript{
+    background-color: #CBF73E;
+    color: #000;
+}
+
 /* contenedor de botones del articulo de proyecto*/
 .proyect-buttons{
     width: 100%;

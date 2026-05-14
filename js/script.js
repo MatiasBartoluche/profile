@@ -291,7 +291,7 @@ function addProyectArticle(container, image, title, description, links){
                               "<h2>"+title+"</h2>"+
                               "<p>"+description+"</p>"+
                               "<div class='keyworlds'>"+
-                                  "<p>Keyworlds: </p>"+
+                                  "<p class='keys'>Keyworlds: </p>"+
                                   "<p class='html'>HTML</p>"+
                                   "<p class='css'>CSS</p>"+
                                   "<p class='javascript'>JavaScript</p>"+
