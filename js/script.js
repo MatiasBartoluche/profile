@@ -39,8 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     addEducationArticle(section2, './img/diploma.png', 'Universidad Nacional Arturo Jauretche', 'Ingeniería en informática');
 
     // insertando articulos en la seccion dev skills
-    addDevArticle(section3, './img/java.png', 'Java');
-    addDevArticle(section3, './img/java.png', 'Java');
+    addDevArticle(section3, './img/html.png', 'HTML 5');
+    addDevArticle(section3, './img/css.png', 'CSS 3');
+    addDevArticle(section3, './img/javascript.png', 'JavaScript');
+    addDevArticle(section3, './img/jquery.png', 'JQuery');
     addDevArticle(section3, './img/java.png', 'Java');
 
     // insertando articulos en la seccion 3
