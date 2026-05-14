@@ -588,6 +588,23 @@ body{
     text-align: center;
 }
 
+.presentation-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.presentation-info img{
+    width: 30%;
+    height: fit-content;
+}
+
+.presentation-info p{
+    width: 68%;
+    margin: 1%;
+}
+
 .education-info{
     width: 100%;
     display: flex;

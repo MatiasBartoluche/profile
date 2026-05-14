@@ -227,7 +227,7 @@ function addPresentationArticle(container, title, image, info){
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-orange'>"+
                             "<h2>"+title+"</h2>"+
-                            "<div class='education-info'>"+
+                            "<div class='presentation-info'>"+
                                 "<img src='"+image+"'>"+
                                 "<p>"+info+"</p>"+
                             "</div>"+
