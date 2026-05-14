@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // insertando articulos en la seccion de proyectos
     var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
+    var keyworlds = "<p class='keys'>Keyworlds: </p>"+"<p class='html'>HTML</p>"+"<p class='css'>CSS</p>"+"<p class='javascript'>JavaScript</p>";
 
-    addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links);
+    addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links, keyworlds);
 });
 
 function openPage(){
@@ -281,7 +282,7 @@ function addSkillArticle(container, title, image, info){
 // title = String - titulo del articulo
 // description = String - descripcion del articulo
 // links = object - objeto que consta de tres atributos string, links para botones
-function addProyectArticle(container, image, title, description, links){
+function addProyectArticle(container, image, title, description, links, keyworlds){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-proyect glow-circle glow-rainbow'>"+
@@ -290,12 +291,7 @@ function addProyectArticle(container, image, title, description, links){
                               "</div>"+
                               "<h2>"+title+"</h2>"+
                               "<p>"+description+"</p>"+
-                              "<div class='keyworlds'>"+
-                                  "<p class='keys'>Keyworlds: </p>"+
-                                  "<p class='html'>HTML</p>"+
-                                  "<p class='css'>CSS</p>"+
-                                  "<p class='javascript'>JavaScript</p>"+
-                              "</div>"+
+                              "<div class='keyworlds'>"+keyworlds+"</div>"+
 
                               "<div class='proyect-buttons'>"+
                                   "<a class='custom-button light-button' href='"+links.info+"'>"+
