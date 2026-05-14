@@ -588,26 +588,18 @@ body{
     text-align: center;
 }
 
-.card-article img{
-    width: 64px;
-    height: 64px;
-}
-
-.card-article p{
-    width: 68%;
-    padding: 1%;
-    text-align: center;    
-}
-
-.education-article{
-    width: 25%;
+.education-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .education-article img{
     width: 30%;
 }
 
-.education-info{
+.education-info p{
     width: 70%;
 }
 

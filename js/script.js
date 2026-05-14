@@ -239,9 +239,9 @@ function addEducationArticle(container, image, title, info){
   var contenedor = container;
 
   contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-blue'>"+
-                            "<img src='"+image+"'>"+
+                            "<h2>"+title+"</h2>"+
                             "<div class='education-info'>"+
-                                "<h2>"+title+"</h2>"+
+                                "<img src='"+image+"'>"+
                                 "<p>"+info+"</p>"+
                             "</div>"+
                           "</article>";
