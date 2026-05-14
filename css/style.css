@@ -604,6 +604,13 @@ body{
     margin: 1%;
 }
 
+.education-info h3{
+    font-size: medium;
+    width: 68%;
+    margin: 1%;
+    text-align: center;
+}
+
 /* estilos articulos de skills */
 .dev-article{
     padding: 1%;
@@ -676,6 +683,7 @@ body{
 
 .css{
     background-color: #27B0F5;
+    color: #000;
 }
 
 .javascript{

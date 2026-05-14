@@ -246,7 +246,7 @@ function addEducationArticle(container, image, title, info){
                             "<h2>"+title+"</h2>"+
                             "<div class='education-info'>"+
                                 "<img src='"+image+"'>"+
-                                "<p>"+info+"</p>"+
+                                "<h3>"+info+"</h3>"+
                             "</div>"+
                           "</article>";
 }
