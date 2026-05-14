@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     addPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
 
     // insertando archivos en la seccion education
-    addEducationArticle(section2, './img/diploma.png', 'Article 1', 'description');
-    addEducationArticle(section2, './img/diploma.png', 'Article 2', 'description');
-    addEducationArticle(section2, './img/diploma.png', 'Article 3', 'description');
-    addEducationArticle(section2, './img/diploma.png', 'Article 4', 'description');
+    addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Economía y gestión de las organizaciones');
+    addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Asistente de programación');
+    addEducationArticle(section2, './img/diploma.png', 'Universidad Nacional Arturo Jauretche', 'Ingeniería en informática');
 
     // insertando articulos en la seccion dev skills
     addDevArticle(section3, './img/java.png', 'Java');
