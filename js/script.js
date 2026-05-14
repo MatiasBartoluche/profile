@@ -227,7 +227,7 @@ function addPresentationArticle(container, title, image, info){
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-orange'>"+
                             "<h2>"+title+"</h2>"+
-                            "<div class='presentation-info'>"+
+                            "<div class='info-container'>"+
                                 "<img src='"+image+"'>"+
                                 "<p>"+info+"</p>"+
                             "</div>"+
@@ -244,7 +244,7 @@ function addEducationArticle(container, image, title, info){
 
   contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-blue'>"+
                             "<h2>"+title+"</h2>"+
-                            "<div class='education-info'>"+
+                            "<div class='info-container'>"+
                                 "<img src='"+image+"'>"+
                                 "<h3>"+info+"</h3>"+
                             "</div>"+
@@ -274,8 +274,10 @@ function addSkillArticle(container, title, image, info){
 
   contenedor.innerHTML += "<article class='card-article glow-circle glow-green'>"+
                             "<h2>"+title+"</h2>"+
-                            "<img src='"+image+"'>"+
-                            "<p>"+info+"</p>"+
+                            "<div class='info-container'>"+
+                                "<img src='"+image+"'>"+
+                                "<p>"+info+"</p>"+
+                            "</div>"+
                           "</article>"
 }
 

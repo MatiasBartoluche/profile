@@ -588,40 +588,24 @@ body{
     text-align: center;
 }
 
-.presentation-info{
+.info-container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.presentation-info img{
+.info-container img{
     width: 30%;
     height: fit-content;
 }
 
-.presentation-info p{
+.info-container p{
     width: 68%;
     margin: 1%;
 }
 
-.education-info{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.education-article img{
-    width: 30%;
-}
-
-.education-info p{
-    width: 68%;
-    margin: 1%;
-}
-
-.education-info h3{
+.info-container h3{
     font-size: medium;
     width: 68%;
     margin: 1%;
