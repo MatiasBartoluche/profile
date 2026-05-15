@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addDevArticle(section3, './img/java.png', 'Java');
     addDevArticle(section3, './img/hibernate.png', 'Hibernate');
     addDevArticle(section3, './img/postgresql.png', 'PostgreSQL');
+    addDevArticle(section3, './img/git.png', 'Git');
     addDevArticle(section3, './img/github.png', 'GitHub');
 
     // insertando articulos en la seccion skills
