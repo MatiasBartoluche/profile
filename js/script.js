@@ -28,10 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
     
     // insertando article en la seccion soft skills
-    addPresentationArticle(section1, 'Article 1', './img/card.png', informacion);
-    addPresentationArticle(section1, 'Article 2', './img/card.png', informacion);
-    addPresentationArticle(section1, 'Article 3', './img/card.png', informacion);
-    addPresentationArticle(section1, 'Article 4', './img/card.png', informacion);
+    var profesional = 'Soy una persona responsable, organizada y comprometida con el aprendizaje constante.';
+    var analisis = 'Habilidad para interpretar información técnica, organizar procesos y tomar decisiones basadas en lógica y eficiencia.';
+    var adaptabilidad = 'Puedo adaptarme rápidamente a nuevas herramientas, metodologías y cambios dentro de un proyecto.';
+    var comunicacion = 'Soy una persona que puede comunicarse con fluidez, para transmitir ideas técnicas de manera clara, tanto de forma escrita como verbal.';
+    var persistencia = 'Con determinación para enfrentar desafíos técnicos y continuar trabajando hasta encontrar una solución adecuada.';
+    addPresentationArticle(section1, 'Profesional y responsable', './img/card.png', profesional);
+    addPresentationArticle(section1, 'Criterio analítico', './img/analisis.png', analisis);
+    addPresentationArticle(section1, 'Adaptabilidad', './img/rompecabezas.png', adaptabilidad);
+    addPresentationArticle(section1, 'Comunicacion', './img/comunicacion.png', comunicacion);
+    addPresentationArticle(section1, 'Persistencia', './img/engranajes.png', persistencia);
 
     // insertando archivos en la seccion education
     addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Economía y gestión de las organizaciones');
