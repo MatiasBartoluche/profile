@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var section4 = document.getElementById('fourth-section');
     var section5 = document.getElementById('fifth-section');
 
-    var informacion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui alias, id quae autem aliquam adipisci quaerat possimus voluptates praesentium veritatis nihil vero cum perspiciatis culpa nostrum quos fuga. Excepturi.";
-    
     // insertando article en la seccion soft skills
     var profesional = 'Soy una persona responsable, organizada y comprometida con el aprendizaje constante.';
     var analisis = 'Habilidad para interpretar información técnica, organizar procesos y tomar decisiones basadas en lógica y eficiencia.';
@@ -74,10 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
     addSkillArticle(section4, 'Documentación', './img/documentacion.png', documentacion);
 
     // insertando articulos en la seccion de proyectos
-    var links = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
+    var links_presentacion = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
     var keyworlds = "<p class='keys'>Keyworlds: </p>"+"<p class='html'>HTML</p>"+"<p class='css'>CSS</p>"+"<p class='javascript'>JavaScript</p>";
 
-    addProyectArticle(section5, './img/default-proyect.jpg', 'Proyect 1', informacion, links, keyworlds);
+    var info_presentacion = "Página en la que enlisto mis habilidades, conocimientos de tecnologías y proyectos en los que he estado trabajando. El aspecto de la paginacambiará periodicamente para hacerla mas atractiva y estetica.";
+    addProyectArticle(section5, './img/default-proyect.jpg', 'Página de presentación', info_presentacion, links_presentacion, keyworlds);
 });
 
 function openPage(){
