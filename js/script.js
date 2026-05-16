@@ -73,11 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // insertando articulos en la seccion de proyectos
     var links_presentacion = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
-    var keyworlds = "<p class='keys'>Keyworlds: </p>"+"<p class='html'>HTML</p>"+"<p class='css'>CSS</p>"+"<p class='javascript'>JavaScript</p>";
+    var keyworlds_presentacion = '<p class="keys">Keyworlds: </p>'+'<p class="html">HTML</p>'+'<p class="css">CSS</p>'+'<p class="javascript">JavaScript</p>';
+    var info_presentacion = "Página en la que enlisto mis habilidades, conocimientos de tecnologías y proyectos y repositorios en los que he estado trabajando. El aspecto de la paginacambiará periodicamente para hacerla mas atractiva y estetica.";
+    addProyectArticle(section5, './img/default-proyect.jpg', 'Página de presentación', info_presentacion, links_presentacion, keyworlds_presentacion);
 
-    var info_presentacion = "Página en la que enlisto mis habilidades, conocimientos de tecnologías y proyectos en los que he estado trabajando. El aspecto de la paginacambiará periodicamente para hacerla mas atractiva y estetica.";
-    addProyectArticle(section5, './img/default-proyect.jpg', 'Página de presentación', info_presentacion, links_presentacion, keyworlds);
-});
+    var links_fases_luna ={info:'./pages/warning.html', page:'https://matiasbartoluche.github.io/realidad-aumentada-jardin/', github:'https://github.com/MatiasBartoluche/realidad-aumentada-jardin'};
+    var keyworlds_fases_luna = '<p class="keys">Keyworlds: </p>'+'<p class="html">HTML</p>'+'<p class="html">A-Frame</p>'+'<p class="css">CSS</p>'+'<p class="css">Bootstrap</p>'+'<p class="javascript">JavaScript</p>';
+    var info_fases_luna = 'Aplicacion web creada con el objetivo de ilustrar las fases de la luna de forma didactica. A través de dispositivos moviles, escanea imagenes determinadas y visualiza modelos 3D del sol, la tierra y la luna. Pensado para alumnos de nivel inicial.';
+    addProyectArticle(section5, './img/fases-luna.png', 'Fases de la luna con realidad aumentada', info_fases_luna, links_fases_luna, keyworlds_fases_luna);
+
+  });
 
 function openPage(){
   let open = document.getElementById('open-page');
@@ -318,7 +323,7 @@ function addProyectArticle(container, image, title, description, links, keyworld
                               "<h2>"+title+"</h2>"+
                               "<p>"+description+"</p>"+
                               "<div class='keyworlds'>"+keyworlds+"</div>"+
-
+                              
                               "<div class='proyect-buttons'>"+
                                   "<a class='custom-button light-button' href='"+links.info+"'>"+
                                       "<img src='./img/details-white.png'>"+
