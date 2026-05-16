@@ -740,6 +740,7 @@ body{
 .warning-article p{
     width: 100%;
     font-size: large;
+    text-align: center;
 }
 
 .warning-article a{
