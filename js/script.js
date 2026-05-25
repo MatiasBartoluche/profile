@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         main_container.classList.add('expand');
     }
 
-    openPage();
-    closePage();
-
     //newComment();
     //loadComments();
 
@@ -83,36 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
     addProyectArticle(section5, './img/fases-luna.png', 'Fases de la luna con realidad aumentada', info_fases_luna, links_fases_luna, keyworlds_fases_luna);
 
   });
-
-function openPage(){
-  let open = document.getElementById('open-page');
-  const header = document.getElementById('main-header');
-  const main_container = document.getElementById('main-container');
-
-  open.addEventListener('click', function(){
-    header.classList.add('small-header');
-    main_container.classList.add('expand');
-    // elimina estado inicial
-    document.documentElement.classList.add('page-open');
-    //guardar estado "abierto" de la pagina
-    localStorage.setItem('pageState', 'open');
-  });
-}
-
-function closePage(){
-  let close = document.getElementById('close-page');
-  const header = document.getElementById('main-header');
-  const main_container = document.getElementById('main-container');
-
-  close.addEventListener('click', function(){
-    header.classList.remove('small-header');
-    main_container.classList.remove('expand');
-    // elimina estado inicial
-    document.documentElement.classList.remove('page-open');
-    //guardar estado "cerrado" de la pagina
-    localStorage.setItem('pageState', 'closed');
-  });
-}
 
 // funcion que captura datos del formulario y lo inserta en la pagina
 function newComment(){
