@@ -395,11 +395,6 @@ body{
     height: 25px;
 }
 
-/* estado abierto desde el inicio, este estilo aplica al <html> */
-.page-open .header {
-    transform: scaleY(0.1);
-}
-
 /* ####################### estilos para header cuando se abre la persiana #################### */
 
 /* cuando el header se achica */
