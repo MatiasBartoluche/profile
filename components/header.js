@@ -1,8 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function () {
-    openPage();
-    closePage();  
-});*/
-
 class HeaderComponent extends HTMLElement {
 
     connectedCallback() {
