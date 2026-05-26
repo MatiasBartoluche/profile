@@ -16,7 +16,7 @@ class NavComponent extends HTMLElement{
             ]
         }
         else{
-            menu = [ {text:'Pagina principal', href:'./index.html'} ]
+            menu = [ {text:'', href:''} ]
         }
 
         // convierto el objeto a texto para insertarlo en la pagina

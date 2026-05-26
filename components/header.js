@@ -47,7 +47,7 @@ class HeaderComponent extends HTMLElement {
                     </div>
 
                     <div id="image-header">
-                        <img src="./img/portada.png">
+                        <img src="/img/portada.png">
                     </div>
 
                     <div id="trapecio-open" class="trapecio-wrapper glow-white-infinite">
