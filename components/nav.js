@@ -15,6 +15,9 @@ class NavComponent extends HTMLElement{
                 {text:'Comentarios', href:'#fifth-section'}
             ]
         }
+        else{
+            menu = [ {text:'Pagina principal', href:'/index.html'} ]
+        }
 
         // convierto el objeto a texto para insertarlo en la pagina
         menu.forEach(item => {
