@@ -294,7 +294,7 @@ body{
 }
 
 /* contenedor de titulo, subtitulo y botones de redes sociales */
-#title{
+.title{
     width: 100%;
     height: 40vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
@@ -303,14 +303,14 @@ body{
     justify-content: space-evenly;
 } 
 
-#title h1 {
+.title h1 {
     font-size: 3em;
     margin: 0;
     width: 100%;
     text-align: center;
 }
 
-#title h2 {
+.title h2 {
     font-size: 1.5em;
     margin: 0.5em 0 0;
     width: 100%;
@@ -318,7 +318,7 @@ body{
 }
 
 /* contenedor de botones */
-#contact-buttons{
+.contact-buttons{
     width: 50%;
     height: 10vh;
     display: flex;
@@ -329,20 +329,20 @@ body{
 }
 
 /* contenedor de imagen */
-#image-header{
+.image-header{
     width: 100%;
     height: 45vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
 }
 
-#image-header img {
+.image-header img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para llenar su contenedor */
 }
 
 /* contenedor botones de redes sociales */
-#button-container{
+.button-container{
     width: 100%;
 }
 
@@ -425,23 +425,23 @@ body{
     flex-direction: row;
 }
 
-.header.small-header #title{
+.header.small-header .title{
     width: 30%;
     height: 10vh;
     align-items: center;
     font-size: small;
 }
 
-.header.small-header #title h1{
+.header.small-header .title h1{
     width: 60%;
     max-height: fit-content;
 }
 
-.header.small-header #title h2{
+.header.small-header .title h2{
     display: none;
 }
 
-.header.small-header #contact-buttons{
+.header.small-header .contact-buttons{
     transition: none;
     width: 40%;
     display: flex;
@@ -460,7 +460,7 @@ body{
     padding: 1em;
 }
 
-.header.small-header #image-header{
+.header.small-header .image-header{
     width: 30%;
     height: 10vh;
 }

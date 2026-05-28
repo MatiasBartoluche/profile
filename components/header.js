@@ -11,12 +11,12 @@ class HeaderComponent extends HTMLElement {
 
                 <div id="header-container" class="header-container">
 
-                    <div id="title">
+                    <div class="title">
                         <h1>Matías Bartoluche</h1>
                         <h2>Front-end / Back-end Developer</h2>
                     </div>
 
-                    <div id="contact-buttons">
+                    <div class="contact-buttons">
 
                         <a href="https://www.linkedin.com/in/mat%C3%ADas-bartoluche-433982161/" 
                            target="_blank"
@@ -46,7 +46,7 @@ class HeaderComponent extends HTMLElement {
 
                     </div>
 
-                    <div id="image-header">
+                    <div class="image-header">
                         <img src="/img/portada.png">
                     </div>
 
