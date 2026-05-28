@@ -1,6 +1,8 @@
 class HeaderComponent extends HTMLElement {
 
     connectedCallback() {
+        const name = 'Matías Bartoluche';
+        const subtitle = 'Front-end / Back-end Developer';
 
         // HTML del header
         this.innerHTML = `
@@ -12,8 +14,8 @@ class HeaderComponent extends HTMLElement {
                 <div id="header-container" class="header-container">
 
                     <div class="title">
-                        <h1>Matías Bartoluche</h1>
-                        <h2>Front-end / Back-end Developer</h2>
+                        <h1>`+name+`</h1>
+                        <h2>`+subtitle+`</h2>
                     </div>
 
                     <div class="contact-buttons">
