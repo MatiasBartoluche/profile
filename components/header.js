@@ -22,23 +22,23 @@ class HeaderComponent extends HTMLElement {
                            target="_blank"
                            class="social-media-button light-button">
 
-                            <img src="./img/linkedin.png">
+                            <img src="/img/linkedin.png">
                         </a>
 
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bartoluche.matias@gmail.com&su=Contacto%20desde%20mi%20sitio%20web%20Github" 
                            target="_blank"
                            class="social-media-button light-button">
 
-                            <img src="./img/gmail.png">
+                            <img src="/img/gmail.png">
                         </a>
 
                         <a href="https://github.com/MatiasBartoluche"
                            class="social-media-button light-button">
 
-                            <img src="./img/github.png">
+                            <img src="/img/github.png">
                         </a>
 
-                        <a href="../docs/plantilla-curriculum-ejemplo.docx">
+                        <a href="/docs/plantilla-curriculum-ejemplo.docx">
                             <button id="cv" class="custom-button">
                                 Descargar cv
                             </button>
@@ -47,13 +47,13 @@ class HeaderComponent extends HTMLElement {
                     </div>
 
                     <div id="image-header">
-                        <img src="./img/portada.png">
+                        <img src="/img/portada.png">
                     </div>
 
                     <div id="trapecio-open" class="trapecio-wrapper glow-white-infinite">
 
                         <button id="open-page" class="open-page">
-                            <img src="./img/double-arrow-up.png">
+                            <img src="/img/double-arrow-up.png">
                         </button>
 
                     </div>
@@ -63,7 +63,7 @@ class HeaderComponent extends HTMLElement {
                 <div id="trapecio-close" class="trapecio-wrapper glow-white-infinite">
 
                     <button id="close-page" class="close-page">
-                        <img src="./img/double-arrow-down.png">
+                        <img src="/img/double-arrow-down.png">
                     </button>
 
                 </div>
