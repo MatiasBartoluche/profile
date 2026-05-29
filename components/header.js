@@ -1,8 +1,30 @@
 class HeaderComponent extends HTMLElement {
 
     connectedCallback() {
+        const page = this.getAttribute('page');
         const name = 'Matías Bartoluche';
         const subtitle = 'Front-end / Back-end Developer';
+        const resources =[
+                {linkedin: '/img/linkedin.png'},
+                {gmail: '/img/gmail.png'},
+                {github: '/img/github.png'},
+                {curriculum: '/docs/plantilla-curriculum-ejemplo.docx'},
+                {portada: '/img/portada.png'},
+                {arrow_up: '/img/double-arrow-up.png'},
+                {arrow_down: '/img/double-arrow-down.png'}
+            ];
+
+        if(page !== 'index'){
+            const resources =[
+                    {linkedin: '../img/linkedin.png'},
+                    {mail: '../img/gmail.png'},
+                    {github: '../img/github.png'},
+                    {curriculum: '/docs/plantilla-curriculum-ejemplo.docx'},
+                    {portada: '../img/portada.png'},
+                    {arrow_up: '../img/double-arrow-up.png'},
+                    {arrow_down: '../img/double-arrow-down.png'}
+                ];
+        }
 
         // HTML del header
         this.innerHTML = `
@@ -24,23 +46,23 @@ class HeaderComponent extends HTMLElement {
                            target="_blank"
                            class="social-media-button light-button">
 
-                            <img src="/img/linkedin.png">
+                            <img src="`+resources[0].linkedin+`">
                         </a>
 
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bartoluche.matias@gmail.com&su=Contacto%20desde%20mi%20sitio%20web%20Github" 
                            target="_blank"
                            class="social-media-button light-button">
 
-                            <img src="/img/gmail.png">
+                            <img src="`+resources[1].gmail+`">
                         </a>
 
                         <a href="https://github.com/MatiasBartoluche"
                            class="social-media-button light-button">
 
-                            <img src="/img/github.png">
+                            <img src="`+resources[2].github+`">
                         </a>
 
-                        <a href="/docs/plantilla-curriculum-ejemplo.docx">
+                        <a href="`+resources[3].curriculum+`">
                             <button id="cv" class="custom-button">
                                 Descargar cv
                             </button>
@@ -49,13 +71,13 @@ class HeaderComponent extends HTMLElement {
                     </div>
 
                     <div class="image-header">
-                        <img src="/img/portada.png">
+                        <img src="`+resources[4].portada+`">
                     </div>
 
                     <div id="trapecio-open" class="trapecio-wrapper glow-white-infinite">
 
                         <button id="open-page" class="open-page">
-                            <img src="/img/double-arrow-up.png">
+                            <img src="`+resources[5].arrow_up+`">
                         </button>
 
                     </div>
@@ -65,7 +87,7 @@ class HeaderComponent extends HTMLElement {
                 <div id="trapecio-close" class="trapecio-wrapper glow-white-infinite">
 
                     <button id="close-page" class="close-page">
-                        <img src="/img/double-arrow-down.png">
+                        <img src="`+resources[6].arrow_down+`">
                     </button>
 
                 </div>
