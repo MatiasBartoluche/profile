@@ -22,18 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var section4 = document.getElementById('fourth-section');
     var section5 = document.getElementById('fifth-section');
 
-    // insertando article en la seccion soft skills
-    var profesional = 'Soy una persona responsable, organizada y comprometida con el aprendizaje constante.';
-    var analisis = 'Habilidad para interpretar información técnica, organizar procesos y tomar decisiones basadas en lógica y eficiencia.';
-    var adaptabilidad = 'Puedo adaptarme rápidamente a nuevas herramientas, metodologías y cambios dentro de un proyecto.';
-    var comunicacion = 'Soy una persona que puede comunicarse con fluidez, para transmitir ideas técnicas de manera clara, tanto de forma escrita como verbal.';
-    var persistencia = 'Con determinación para enfrentar desafíos técnicos y continuar trabajando hasta encontrar una solución adecuada.';
-   
-    addPresentationArticle(section1, 'Criterio analítico', './img/analisis.png', analisis);
-    addPresentationArticle(section1, 'Adaptabilidad', './img/rompecabezas.png', adaptabilidad);
-    addPresentationArticle(section1, 'Comunicacion', './img/comunicacion.png', comunicacion);
-    addPresentationArticle(section1, 'Persistencia', './img/engranajes.png', persistencia);
-
     // insertando archivos en la seccion education
     addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Economía y gestión de las organizaciones');
     addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Asistente de programación');
