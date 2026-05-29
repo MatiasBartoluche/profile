@@ -5,7 +5,7 @@ class HeaderComponent extends HTMLElement {
         const page = this.getAttribute('page');
         const name = 'Matías Bartoluche';
         const subtitle = 'Front-end / Back-end Developer';
-        const resources =[
+        var resources =[
                 {linkedin: '../img/linkedin.png'},
                 {gmail: '../img/gmail.png'},
                 {github: '../img/github.png'},
@@ -17,9 +17,9 @@ class HeaderComponent extends HTMLElement {
 
         // si la pagina es index, cambio las rutas
         if(page === 'index'){
-            const resources =[
+            resources =[
                     {linkedin: './img/linkedin.png'},
-                    {mail: './img/gmail.png'},
+                    {gmail: './img/gmail.png'},
                     {github: './img/github.png'},
                     {curriculum: '../docs/plantilla-curriculum-ejemplo.docx'},
                     {portada: './img/portada.png'},
