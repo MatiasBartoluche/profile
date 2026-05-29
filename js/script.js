@@ -22,11 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var section4 = document.getElementById('fourth-section');
     var section5 = document.getElementById('fifth-section');
 
-    // insertando archivos en la seccion education
-    addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Economía y gestión de las organizaciones');
-    addEducationArticle(section2, './img/diploma.png', 'E.E.M N° 5 María Eva Duarte de Perón', 'Asistente de programación');
-    addEducationArticle(section2, './img/diploma.png', 'Universidad Nacional Arturo Jauretche', 'Ingeniería en informática');
-
     // insertando articulos en la seccion dev skills
     addDevArticle(section3, './img/html.png', 'HTML 5');
     addDevArticle(section3, './img/css.png', 'CSS 3');
