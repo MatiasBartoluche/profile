@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var adaptabilidad = 'Puedo adaptarme rápidamente a nuevas herramientas, metodologías y cambios dentro de un proyecto.';
     var comunicacion = 'Soy una persona que puede comunicarse con fluidez, para transmitir ideas técnicas de manera clara, tanto de forma escrita como verbal.';
     var persistencia = 'Con determinación para enfrentar desafíos técnicos y continuar trabajando hasta encontrar una solución adecuada.';
-    addPresentationArticle(section1, 'Profesional y responsable', './img/card.png', profesional);
+   
     addPresentationArticle(section1, 'Criterio analítico', './img/analisis.png', analisis);
     addPresentationArticle(section1, 'Adaptabilidad', './img/rompecabezas.png', adaptabilidad);
     addPresentationArticle(section1, 'Comunicacion', './img/comunicacion.png', comunicacion);
