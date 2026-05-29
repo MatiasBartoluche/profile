@@ -571,18 +571,21 @@ body{
 }
 
 /*################################ card-article styles ######################*/
+presentation-card{
+    margin: 1%;
+}
+
 .card-article{
-    width: 30%;
+    width: 29%;
     background-color: var(--black-article);
     border-radius: var(--border-radius-article);
     color: var(--white-color);
-    margin: 1%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 1%;
+    padding: 1%;
 }
 
 .card-article h2{

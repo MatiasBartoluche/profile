@@ -4,7 +4,7 @@ class PresentationCardComponent extends HTMLElement{
         var image = this.getAttribute('image');
         var description = this.getAttribute('description');
 
-        this.innerHTML = "<article class='card-article glow-circle glow-orange'>"+
+        this.innerHTML = "<article>"+
                             "<h2>"+title+"</h2>"+
                             "<div class='info-container'>"+
                                 "<img src='"+image+"'>"+
