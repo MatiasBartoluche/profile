@@ -2,7 +2,7 @@ class HeaderComponent extends HTMLElement {
 
     connectedCallback() {
         //const page verifica si la pagina es index.html
-        const page = this.getAttribute('page');
+        //const page = this.getAttribute('page');
         const name = 'Matías Bartoluche';
         const subtitle = 'Front-end / Back-end Developer';
         const resources =[
@@ -16,17 +16,17 @@ class HeaderComponent extends HTMLElement {
             ];
 
         // si la pagina no es index, cambio las rutas
-        if(page !== 'index'){
+ /*       if(page !== 'index'){
             const resources =[
                     {linkedin: './img/linkedin.png'},
                     {mail: './img/gmail.png'},
                     {github: './img/github.png'},
-                    {curriculum: '/docs/plantilla-curriculum-ejemplo.docx'},
+                    {curriculum: './docs/plantilla-curriculum-ejemplo.docx'},
                     {portada: './img/portada.png'},
                     {arrow_up: './img/double-arrow-up.png'},
                     {arrow_down: './img/double-arrow-down.png'}
                 ];
-        }
+        }*/
 
         // HTML del header
         this.innerHTML = `
