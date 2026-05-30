@@ -240,8 +240,27 @@
             <section id="fifth-section" class="section">
                 <h1>Proyectos</h1>
                 <!-- Seccion de proyectos personales -->
-                <!-- Aqui se insertaran los articulos con la funcion
-                addProyectArticle(container, image, title, description) -->
+                <!-- aqui se insertaran los articulos el component proyect_card -->
+
+                <proyect-card  class="card-proyect glow-circle glow-rainbow"
+                    image="./img/default-proyect.jpg"
+                    title="Página de presentación"
+                    description="Página en la que enlisto mis habilidades, conocimientos de tecnologías y proyectos y repositorios en los que he estado trabajando. El aspecto de la paginacambiará periodicamente para hacerla mas atractiva y estetica."
+                    keyworlds="<p class='keys'>Keyworlds: </p><p class='html'>HTML</p><p class='css'>CSS</p><p class='javascript'>JavaScript</p>"
+                    links='{"info": "./pages/warning.html",
+                            "page": "https://matiasbartoluche.github.io/profile/",
+                            "github": "https://github.com/MatiasBartoluche/profile"}'>
+                </proyect-card>
+
+                <proyect-card  class="card-proyect glow-circle glow-rainbow"
+                    image="./img/fases-luna.png"
+                    title="Fases de la luna con realidad aumentada"
+                    description="Aplicacion web creada con el objetivo de ilustrar las fases de la luna de forma didactica. A través de dispositivos moviles, escanea imagenes determinadas y visualiza modelos 3D del sol, la tierra y la luna. Pensado para alumnos de nivel inicial."
+                    keyworlds="<p class='keys'>Keyworlds: </p><p class='html'>HTML</p><p class='html'>A-Frame</p><p class='css'>CSS</p><p class='css'>Bootstrap</p><p class='javascript'>JavaScript</p><p class='javascript'>AR-JS</p><p class='css'>Respoinsive desing</p>"
+                    links='{"info": "./pages/warning.html",
+                            "page": "https://matiasbartoluche.github.io/realidad-aumentada-jardin/",
+                            "github": "https://github.com/MatiasBartoluche/realidad-aumentada-jardin"}'>
+                </proyect-card>
             </section>
 
             <section id="comments-section" class="section">
@@ -290,6 +309,7 @@
     <script type="module" src="./components/nav.js"></script>
     <script type="module" src="./components/standar_card.js"></script>
     <script type="module" src="./components/dev_card.js"></script>
+    <script type="module" src="./components/proyect_card.js"></script>
 </body>
 
 </html>
