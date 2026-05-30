@@ -22,24 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var section4 = document.getElementById('fourth-section');
     var section5 = document.getElementById('fifth-section');
 
-    // insertando articulos en la seccion skills
-    var uml_info = 'Lenguaje unificado de modelad. Visualizar, construir y documentar estructuras de software.';
-    var der_info = "Diagrama entidad-relacion. Visualizar, construir y documentar bases de datos. Aplicacion de las tres formas normales para evitar redundancias.";
-    var escribir = 'Aplicar buenas practicas de programacion para que el codigo sea sencillo, legible y fácil de mantener';
-    var scrum = 'Metodología ágil utilizada para gestionar proyectos mediante iteraciones cortas. Organización del equipo, inspección frecuente y adaptación para mejorar continuamente.';
-    var equipo = 'Comunicación y colaboracion con los integrandes del grupo, intercambiar opiniones y diferentes puntos de vista para lograr resultados.';
-    var gestion = 'Captura de requisitos, alcance del proyecto, riesgos, diagramas y arquitecturas aplicadas a un proyecto.';
-    var detalle = 'Minucioso y detallista en las tareas que realizo. Enfocado en el orden y en nuevas maneras de realizar las actividades de forma óptima.';
-    var documentacion = 'Redaccion de documentacion relevante para un proyecto, tales como captura de requerimientos, diagramas, casoso de uso, riesgos, cronogramas, etc.';
-    addSkillArticle(section4, 'UML', './img/uml.png', uml_info);
-    addSkillArticle(section4, 'DER / Normalizacion', './img/der.png', der_info);
-    addSkillArticle(section4, 'Clean code', './img/write.png', escribir);
-    addSkillArticle(section4, 'Trabajo en equipo', './img/equipo.png', equipo);
-    addSkillArticle(section4, 'Scrum', './img/scrum.png', scrum);
-    addSkillArticle(section4, 'Gestión de proyecto', './img/gestion.png', gestion);
-    addSkillArticle(section4, 'Atencioón al detalle', './img/detalle.png', detalle);
-    addSkillArticle(section4, 'Documentación', './img/documentacion.png', documentacion);
-
     // insertando articulos en la seccion de proyectos
     var links_presentacion = {info: './pages/warning.html', page: 'https://matiasbartoluche.github.io/profile/', github: 'https://github.com/MatiasBartoluche/profile'};
     var keyworlds_presentacion = '<p class="keys">Keyworlds: </p>'+'<p class="html">HTML</p>'+'<p class="css">CSS</p>'+'<p class="javascript">JavaScript</p>';
