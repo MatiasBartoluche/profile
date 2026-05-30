@@ -621,11 +621,15 @@ presentation-card{
 
 /* estilos articulos de skills */
 .dev-article{
-    padding: 1%;
     flex-direction: column;
     justify-content: center;
     width: 128px;
     position: relative;
+    margin: 1%;
+}
+
+.dev-article p{
+    text-align: center;
 }
 
 /* estilos articulos de proyectos */
