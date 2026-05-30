@@ -1,4 +1,4 @@
-class PresentationCardComponent extends HTMLElement{
+class StandarCardComponent extends HTMLElement{
     connectedCallback(){
         var title = this.getAttribute('title');
         var image = this.getAttribute('image');
@@ -15,4 +15,4 @@ class PresentationCardComponent extends HTMLElement{
     }
 }
 
-customElements.define("presentation-card", PresentationCardComponent);
+customElements.define("standar-card", StandarCardComponent);
