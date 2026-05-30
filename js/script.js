@@ -22,17 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var section4 = document.getElementById('fourth-section');
     var section5 = document.getElementById('fifth-section');
 
-    // insertando articulos en la seccion dev skills
-    addDevArticle(section3, './img/html.png', 'HTML 5');
-    addDevArticle(section3, './img/css.png', 'CSS 3');
-    addDevArticle(section3, './img/javascript.png', 'JavaScript');
-    addDevArticle(section3, './img/jquery.png', 'JQuery');
-    addDevArticle(section3, './img/java.png', 'Java');
-    addDevArticle(section3, './img/hibernate.png', 'Hibernate');
-    addDevArticle(section3, './img/postgresql.png', 'PostgreSQL');
-    addDevArticle(section3, './img/git.png', 'Git');
-    addDevArticle(section3, './img/github.png', 'GitHub');
-
     // insertando articulos en la seccion skills
     var uml_info = 'Lenguaje unificado de modelad. Visualizar, construir y documentar estructuras de software.';
     var der_info = "Diagrama entidad-relacion. Visualizar, construir y documentar bases de datos. Aplicacion de las tres formas normales para evitar redundancias.";
@@ -191,53 +180,6 @@ async function loadComments() {
                                         "</div>";
         });
       }
-}
-
-// funcion que inserta articulos de soft skills
-// container = contenedor donde se va a insertar el articulo
-// title = String - tilulo del articulo
-// image = String - ruta del archivo de imagen (debe introducirse en formato texto)
-// info = String - informacion del articulo
-function addPresentationArticle(container, title, image, info){
-  var contenedor = container;
-
-  contenedor.innerHTML += "<article class='card-article glow-circle glow-orange'>"+
-                            "<h2>"+title+"</h2>"+
-                            "<div class='info-container'>"+
-                                "<img src='"+image+"'>"+
-                                "<p>"+info+"</p>"+
-                            "</div>"+
-                          "</article>"
-}
-
-// funcion que inserta articulos de education
-// container = contenedor donde se va a insertar el articulo
-//title = String - tituli del articulo
-// image = String - ruta del archivo imagen
-// info = String - informacion del articulo
-function addEducationArticle(container, image, title, info){
-  var contenedor = container;
-
-  contenedor.innerHTML += "<article class='card-article education-article glow-circle glow-blue'>"+
-                            "<h2>"+title+"</h2>"+
-                            "<div class='info-container'>"+
-                                "<img src='"+image+"'>"+
-                                "<h3>"+info+"</h3>"+
-                            "</div>"+
-                          "</article>";
-}
-
-// funcion que inserta articulos de programacion
-// container = contenedor donse se va a instalar el articulo
-// image = String - ruta de la imagen del articulo
-// title = String - titulo del articulo
-function addDevArticle(container, image, title){
-  var contenedor = container;
-
-  contenedor.innerHTML += "<article class='card-article dev-article glow-circle glow-sky'>"+
-                            "<img src="+image+">"+
-                            "<p>"+title+"</p>"+
-                          "</article>";
 }
 
 // funcion que inserta articulos de soft skills
