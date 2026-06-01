@@ -571,10 +571,6 @@ body{
 }
 
 /*################################ card-article styles ######################*/
-standar-card{
-    margin: 1%;
-}
-
 .card-article{
     width: 29%;
     background-color: var(--black-article);
@@ -586,6 +582,7 @@ standar-card{
     justify-content: space-evenly;
     align-items: center;
     padding: 1%;
+    margin: 1%;
 }
 
 .card-article h2{
