@@ -741,6 +741,10 @@ body{
     width: 50%;
 }
 
+.warning-article img{
+    width: 25%;
+}
+
 .warning-article p{
     width: 100%;
     font-size: large;
