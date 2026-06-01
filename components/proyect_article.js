@@ -1,4 +1,4 @@
-class ProyectCardComponent extends HTMLElement{
+class ProyectArticleComponent extends HTMLElement{
     connectedCallback(){
         var image = this.getAttribute('image');
         var title = this.getAttribute('title');
@@ -35,4 +35,4 @@ class ProyectCardComponent extends HTMLElement{
     }
 }
 
-customElements.define('proyect-card',ProyectCardComponent);
+customElements.define('proyect-article',ProyectArticleComponent);
