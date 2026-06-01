@@ -571,8 +571,16 @@ body{
 }
 
 /*################################ card-article styles ######################*/
-.card-article{
+
+/* estilos para las standar-article */
+standar-article{
     width: 29%;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* estilos que utilizaran todos los article */
+.card-article{
     background-color: var(--black-article);
     border-radius: var(--border-radius-article);
     color: var(--white-color);
@@ -581,8 +589,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1%;
-    margin: 1%;
 }
 
 .card-article h2{
