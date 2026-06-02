@@ -743,6 +743,29 @@ standar-article{
     text-align: center;
 }
 
+/* estilos para articulos informativos */
+.info-article{
+    width: 80%;
+    padding: 1%;
+}
+
+.info-article h1{
+    margin-bottom: 0;
+    padding-left: 1%;
+    text-align: left;
+}
+
+.neon-bottom{
+    width: 98%;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, orange, #ff7300 );
+    animation: neonBottom 3s infinite;
+}
+
+/* estils para la pagina warning.html */
 .warning-article{
     width: 50%;
 }
