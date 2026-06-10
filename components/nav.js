@@ -1,33 +1,19 @@
 class NavComponent extends HTMLElement{
     connectedCallback(){
-        const page = this.getAttribute('page');
         var construir_menu ='';
-        var menu ='';
+        var links = JSON.parse(this.getAttribute('links'));
 
-        // detectar de que pagina se usara el componente
-        if(page === 'index'){
-            menu = [
-                {text:'Sobre mí', href:'#first-section'},
-                {text:'Formación académica', href:'#first-section'},
-                {text:'Tecnologías', href:'#second-section'},
-                {text:'Habilidades', href:'#thirth-section'},
-                {text:'Proyectos', href:'#fourth-section'},
-                {text:'Comentarios', href:'#fifth-section'}
-            ]
-        }
-        else{
-            menu = [ {text:'', href:''} ]
-        }
-
-        // convierto el objeto a texto para insertarlo en la pagina
-        menu.forEach(item => {
-            //console.log(`${item.text} - ${item.href}`);
-            construir_menu = construir_menu + '<li>'+
-                                                    '<a href="'+item.href+'"> '+item.text+' </a>'+
+        if(links !== null){
+            // recorro la lista json conla info de los item del menu y su href
+            links.forEach((item, indice) => {
+            // concatenar en la variable construir_menu cada etiqueta <li> que se construye
+                construir_menu = construir_menu + '<li>'+
+                                                    '<a href="'+item.link+'"> '+item.name+' </a>'+
                                                 '</li>'
-        });
+            });
+        }
 
-        // inserto el texto en la pagina
+        // inserto el nav en la pagina
         this.innerHTML ='<ul>'+construir_menu+'</ul>';
     }
 }

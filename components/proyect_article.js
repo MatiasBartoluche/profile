@@ -6,8 +6,6 @@ class ProyectArticleComponent extends HTMLElement{
         var keyworlds = this.getAttribute('keyworlds');
         var links = JSON.parse(this.getAttribute('links'));
 
-        console.log(links);
-
         this.innerHTML =  
                               "<div class='img-content'>"+
                                   "<img src='"+image+"'>"+
