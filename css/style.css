@@ -756,6 +756,13 @@ standar-article{
     text-align: left;
 }
 
+.info-article img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; /* Ajusta el tamaño según necesites */
+}
+
 /* estilos de colores para el subrayyadode titulos, primero debe usarse
     .bottom-color y luego .neon-bottom
 */
