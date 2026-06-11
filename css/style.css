@@ -749,6 +749,7 @@ standar-article{
     width: 80%;
     padding: 1%;
     margin: 1%;
+    scroll-margin-top: 18vh;
 }
 
 .info-article h1{
