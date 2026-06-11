@@ -5,7 +5,21 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Matiías Bartoluche</title>
+    <link rel="icon" type="image/png" href="./img/dev.png">
+    <title>Matías Bartoluche</title>
+
+    <!-- script necesario para evitar parmadeo de pagina
+     y evitar visualizar la animacion del header al recargar pagina-->
+    <script>
+    (function() {
+        const state = localStorage.getItem('pageState');
+
+        if (state === 'open') {
+            document.documentElement.classList.add('page-open');
+        }
+    })();
+    </script>
+
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
 
@@ -18,63 +32,9 @@
 </head>
 
 <body id="body">
-    <header id="main-header" class="header">
-        <div class="header-container">
-            <div id="title">
-                <h1>Titulo</h1>
-                <h2>Subtitulo</h2>
-            </div>
-
-            <div id="contact-buttons">
-                <a href="https://www.linkedin.com/in/mat%C3%ADas-bartoluche-433982161/" target="_blank" class="social-media-button light-button">
-                    <img src="./img/linkedin.png">
-                </a>
-
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bartoluche.matias@gmail.com&su=Contacto%20desde%20mi%20sitio%20web%20Github" target="_blank" class="social-media-button light-button">
-                    <img src="./img/gmail.png">
-                </a>
-
-                <a href="https://github.com/MatiasBartoluche" class="social-media-button light-button"> 
-                    <img src="./img/github.png">
-                </a>
-
-                <a href="./docs/plantilla-curriculum-ejemplo.docx">
-                    <button id="cv" class="custom-button">Descargar cv</button>
-                </a>
-
-            </div>
-
-            <div id="image-header">
-                <img src="./img/portada.png">
-            </div>
-
-            <div class="trapecio-wrapper">
-                <button id="open-page" class="open-page">
-                    <img src="./img/double-arrow-up.png">
-                </button>
-            </div>
-        </div>
-
-         <!--menu vertical -->
-        <nav id="main-menu" class="menu">
-            <ul>
-                <!-- cada link hace un desplazamiento interno a su seccion correspondiente -->
-                <li> <a href="#first-section" id="option1">Option 1</a> </li>
-                <li> <a href="#second-section">Option 2</a> </li>
-                <li> <a href="#thirth-section">Option 3</a> </li>
-                <li> <a href="#fourth-section">Option 4</a> </li>
-                <li> <a href="#fifth-section">Option 5</a> </li>
-                <li> <a href="#comments-section">Comments</a> </li>
-            </ul>
-        </nav>
-
-        <div class="trapecio-wrapper">
-            <button id="close-page" class="close-page">
-                <img src="./img/double-arrow-down.png">
-            </button>
-        </div>
-
-    </header>
+    <header-component page="index" id="main-header" class="header">
+        
+    </header-component>
 
     <div id="toogle-tools">
         <div id="div-toogle">
@@ -90,45 +50,239 @@
     </div>
 
     <div id="main-container">
+        <!--menu vertical -->
+        <nav-component
+            id="main-menu"
+            class="menu"
+            links='[{"name": "Sobre mi" ,"link": "#first-section"},
+                    {"name": "Formación académica" ,"link": "#second-section"},
+                    {"name": "Tecnologías" ,"link": "#thirth-section"},
+                    {"name": "Habilidades" ,"link": "#fourth-section"},
+                    {"name": "Proyectos" ,"link": "#fifth-section"}]'>
+        </nav-component>
 
         <div id="section-container">
             <section id="first-section" class="section">
-                <h1>Section 1</h1>
+                <h1>Sobre mí</h1>
                 <!-- Seccion About me -->
-                <!-- aqui se insertaran los articulos con la funcion
-                 insertSkillArticle(container,title, image, info) -->
+                <!-- aqui se insertaran los articulos el component standar_card -->
+                <standar-article
+                    class='card-article glow-circle glow-orange'
+                    title="Profesional y responsable"
+                    image="./img/card.png"
+                    description="Soy una persona responsable, organizada y comprometida con el aprendizaje constante.">
+                </standar-article>
+
+                <standar-article
+                    class='card-article glow-circle glow-orange'
+                    title="Criterio analítico"
+                    image="./img/analisis.png"
+                    description="Habilidad para interpretar información técnica, organizar procesos y tomar decisiones basadas en lógica y eficiencia.">
+                </standar-article>
+
+
+                <standar-article
+                    class='card-article glow-circle glow-orange'
+                    title="Adaptabilidad"
+                    image="./img/rompecabezas.png"
+                    description="Puedo adaptarme rápidamente a nuevas herramientas, metodologías y cambios dentro de un proyecto.">
+                </standar-article>
+
+
+                <standar-article
+                    class='card-article glow-circle glow-orange'
+                    title="Comunicacion"
+                    image="./img/comunicacion.png"
+                    description="Soy una persona que puede comunicarse con fluidez, para transmitir ideas técnicas de manera clara, tanto de forma escrita como verbal.">
+                </standar-article>
+
+
+                <standar-article
+                    class='card-article glow-circle glow-orange'
+                    title="Persistencia"
+                    image="./img/engranajes.png"
+                    description="Con determinación para enfrentar desafíos técnicos y continuar trabajando hasta encontrar una solución adecuada.">
+                </standar-article>
             </section>
 
             <section id="second-section" class="section">
-                <h1>Section 2</h1>
+                <h1>Formación académica</h1>
                 <!-- Seccion formacion academica -->
-                <!-- aqui se insertaran los articulos con la funcion
-                 insertEducationArticle(container, image, title, info) -->
+                <!-- aqui se insertaran los articulos el component standar_card -->
+                <standar-article
+                    class='card-article glow-circle glow-blue'
+                    title="E.E.M N° 5 María Eva Duarte de Perón"
+                    image="./img/diploma.png"
+                    description="Economía y gestión de las organizaciones">
+                </standar-article>
+
+                <standar-article
+                    class='card-article glow-circle glow-blue'
+                    title="E.E.M N° 5 María Eva Duarte de Perón"
+                    image="./img/diploma.png"
+                    description="Asistente de programación.">
+                </standar-article>
+
+                <standar-article
+                    class='card-article glow-circle glow-blue'
+                    title="Universidad Nacional Arturo Jauretche"
+                    image="./img/diploma.png"
+                    description="Ingeniería en informática">
+                </standar-article>
             </section>
 
             <section id="thirth-section" class="section">
-                <h1>Section 3</h1>
+                <h1>Tecnologías</h1>
                 <!-- seccion dev skills -->
-                <!-- aqui se insertaran los articulos con la funcion
-                 insertDevArticle(container, image, title) -->
+                <!-- aqui se insertaran los articulos el component dev_card -->
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/html.png"
+                    title="HTML 5">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/css.png"
+                    title="CSS 3">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/javascript.png"
+                    title="JavaScript">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/jquery.png"
+                    title="JQuery">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/java.png"
+                    title="Java">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/hibernate.png"
+                    title="Hibernate">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/postgresql.png"
+                    title="PostgreSQL">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/git.png"
+                    title="Git">
+                </dev-article>
+
+                <dev-article
+                    class="card-article dev-article glow-circle glow-sky"
+                    image="./img/github.png"
+                    title="GitHub">
+                </dev-article>
+
             </section>
 
             <section id="fourth-section" class="section">
-                <h1>Section 4</h1>
+                <h1>Habilidades</h1>
                 <!-- seccion other skills -->
-                <!-- aqui se insertaran los articulos con la funcion
-                 insertSkillArticle(container,title, image, info) -->
+                <!-- aqui se insertaran los articulos el component standar_card -->
+
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="UML"
+                    image="./img/uml.png"
+                    description="Lenguaje unificado de modelad. Visualizar, construir y documentar estructuras de software.">
+                </standar-article>
+
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="DER / Normalización"
+                    image="./img/der.png"
+                    description="Diagrama entidad-relacion. Visualizar, construir y documentar bases de datos. Aplicacion de las tres formas normales para evitar redundancias.">
+                </standar-article>
+
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Clean code"
+                    image="./img/write.png"
+                    description="Aplicar buenas practicas de programacion para que el codigo sea sencillo, legible y fácil de mantener">
+                </standar-article>
+                
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Trabajo en equipo"
+                    image="./img/equipo.png"
+                    description="Comunicación y colaboracion con los integrandes del grupo, intercambiar opiniones y diferentes puntos de vista para lograr resultados.">
+                </standar-article>
+                
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Scrum"
+                    image="./img/scrum.png"
+                    description="Metodología ágil utilizada para gestionar proyectos mediante iteraciones cortas. Organización del equipo, inspección frecuente y adaptación para mejorar continuamente.">
+                </standar-article>
+                
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Gestión de proyectos"
+                    image="./img/gestion.png"
+                    description="Captura de requisitos, alcance del proyecto, riesgos, diagramas y arquitecturas aplicadas a un proyecto.">
+                </standar-article>
+                
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Atención al detalle"
+                    image="./img/detalle.png"
+                    description="Minucioso y detallista en las tareas que realizo. Enfocado en el orden y en nuevas maneras de realizar las actividades de forma óptima.">
+                </standar-article>
+                
+                <standar-article
+                    class='card-article glow-circle glow-green'
+                    title="Documentación"
+                    image="./img/documentacion.png"
+                    description="Redaccion de documentacion relevante para un proyecto, tales como captura de requerimientos, diagramas, casoso de uso, riesgos, cronogramas, etc.">
+                </standar-article>
+                
             </section>
 
             <section id="fifth-section" class="section">
-                <h1>Section 5</h1>
+                <h1>Proyectos</h1>
                 <!-- Seccion de proyectos personales -->
-                 <!-- Aqui se insertaran los articulos con la funcion
-                  insertProyectArticle(container, image, title, description) -->
+                <!-- aqui se insertaran los articulos el component proyect_card -->
+
+                <proyect-article  class="card-proyect glow-circle glow-rainbow"
+                    image="./img/default-proyect.jpg"
+                    title="Página de presentación"
+                    description="Página en la que enlisto mis habilidades, conocimientos de tecnologías y proyectos y repositorios en los que he estado trabajando. El aspecto de la paginacambiará periodicamente para hacerla mas atractiva y estetica."
+                    keyworlds="<p class='keys'>Keyworlds: </p><p class='html'>HTML</p><p class='css'>CSS</p><p class='javascript'>JavaScript</p>"
+                    links='{"info": "./pages/info-principal.html",
+                            "page": "https://matiasbartoluche.github.io/profile/",
+                            "github": "https://github.com/MatiasBartoluche/profile"}'>
+                </proyect-article>
+
+                <proyect-article  class="card-proyect glow-circle glow-rainbow"
+                    image="./img/fases-luna.png"
+                    title="Fases de la luna con realidad aumentada"
+                    description="Aplicacion web creada con el objetivo de ilustrar las fases de la luna de forma didactica. A través de dispositivos moviles, escanea imagenes determinadas y visualiza modelos 3D del sol, la tierra y la luna. Pensado para alumnos de nivel inicial."
+                    keyworlds="<p class='keys'>Keyworlds: </p><p class='html'>HTML</p><p class='html'>A-Frame</p><p class='css'>CSS</p><p class='css'>Bootstrap</p><p class='javascript'>JavaScript</p><p class='javascript'>AR-JS</p><p class='css'>Respoinsive desing</p>"
+                    links='{"info": "./pages/warning.html",
+                            "page": "https://matiasbartoluche.github.io/realidad-aumentada-jardin/",
+                            "github": "https://github.com/MatiasBartoluche/realidad-aumentada-jardin"}'>
+                </proyect-article>
             </section>
 
             <section id="comments-section" class="section">
-                <h1>Comments</h1>
+                <h1>Comentarios</h1>
                     <div class="comment-container">
                     <h2>Add a comment</h2>
 
@@ -142,7 +296,7 @@
                     </div>
 
                     <div id="comments-main" class="comments">
-                        <!-- cargar comentarios -->
+                    <!-- cargar comentarios -->
 
                     <!-- ######################## estructura de un comentario #########################    
                         <div class='comment'>
@@ -162,13 +316,18 @@
                 </div>
             </section>
         </div>
-
     </div>
 
     <footer class="footer">
         <p>&copy; 2025 My website</p>
     </footer>
 
+
+    <script type="module" src="./components/header.js"></script>
+    <script type="module" src="./components/nav.js"></script>
+    <script type="module" src="./components/standar_article.js"></script>
+    <script type="module" src="./components/dev_article.js"></script>
+    <script type="module" src="./components/proyect_article.js"></script>
 </body>
 
 </html>

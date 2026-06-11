@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="../img/dev.png">
+    <title>Matiías Bartoluche</title>
+
+    <!-- script necesario para evitar parmadeo de pagina
+     y evitar visualizar la animacion del header al recargar pagina-->
+    <script>
+    (function() {
+        const state = localStorage.getItem('pageState');
+
+        if (state === 'open') {
+            document.documentElement.classList.add('page-open');
+        }
+    })();
+    </script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+
+    <!--
+    <script src="https://cdn.counter.dev/script.js" data-id="0fc0c2cd-15ff-4a20-9af8-517675cfaf17" data-utcoffset="-3"></script>
+    -->
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body id="body">
+    <header-component id="main-header" class="header small-header">
+        
+    </header-component>
+
+    <div id="toogle-tools"></div>
+
+    <div id="main-container">
+        <!--menu vertical -->
+        <nav-component
+            page="info-principal"
+            id="main-menu" class="menu"
+            links='[{"name": "Descripción" ,"link": "#descripcion"},
+                    {"name": "Tecnologías" ,"link": "#tecnologias"},
+                    {"name": "Arquitectura" ,"link": "#arquitectura"},
+                    {"name": "Desafíos técnicos" ,"link": "#desafios"},
+                    {"name": "Aprendizaje" ,"link": "#aprendizaje"},
+                    {"name": "Página principal" ,"link": "../index.html"}]'>
+        </nav-component>
+
+        <div id="section-container">
+            <section class="section">
+                <info-article class="info-article card-article" id="descripcion"
+                    title="Descripción"
+                    color="bottom-orange"
+                    description="Este espacio fue creado con el objetivo de presentar mi perfil, mis conocimientos y los proyectos en los que he trabajado a lo largo de mi formación y desarrollo profesional.<br><br> A continuación, se detallaran los aspectos de cómo fue creada esta página, las tecnologías utilizadas, la arquitectura de software, etc.">
+                </info-article>
+
+                <info-article class="info-article card-article" id="tecnologias"
+                    title="Tecnologías"
+                    color="bottom-blue"
+                    description="La pagina en cuestión fue hecha con THML 5 para la estructura, CSS 3 para aplicar diferentes estilos y Javascript para la interacción con el usuario y algunos manejos de eventos.<br><br> La pagina se encuentra alojada en GitHub Pages, un servicio gratuito que permite publicar sitios web estáticos directamente desde sus repositorios. <br><br>Para la reutilización de la estructura, semántica y contenido de la página se utilizó Webcomponent. Por cada segmento de la pagina (como por ejemplo, cabecera, menú, artículos) se creó un archivo javascript que inserta dinámicamente la estructura que se requiera reutilizar.<br><br>De esta forma, los segmentos de la página se encuentran centralizados y facilita la aplicación de futuros cambios de estructura, contenido y estilos.">
+                </info-article>
+
+                <div class="section">
+                    <dev-article class="card-article dev-article glow-circle glow-sky"
+                        image="../img/html.png"
+                        title="HTML 5">
+                    </dev-article>
+
+                    <dev-article class="card-article dev-article glow-circle glow-sky"
+                        image="../img/css.png"
+                        title="CSS 3">
+                    </dev-article>
+
+                    <dev-article class="card-article dev-article glow-circle glow-sky"
+                        image="../img/javascript.png"
+                        title="JavaScript">
+                    </dev-article>
+
+                    <dev-article class="card-article dev-article glow-circle glow-sky"
+                        image="../img/github.png"
+                        title="GitHub">
+                    </dev-article>
+                </div>
+
+                <info-article class="info-article card-article" id="arquitectura"
+                    title="Arquitectura"
+                    color="bottom-sky"
+                    description="Las estructuras HTML, los estilos CSS y los comportamientos con JavaScript se encuentran separados en diferentes archivos para facilitar la manipulación y modificación de dichas partes.<br><br>A su vez, los archivos se encuentran separados en diferentes directorios con la finalidad de agrupar archivos con las mismas extensiones en un solo lugar<br><br>El sistema de directorios es el siguiente:<br><br><img src=../img/directorio.png><br><br>index.html : Página principal del proyecto. <br><br>components : Carpeta que contiene los Webcomponent reutilizables para las diferentes paginas. <br><br>css : contiene los archivos de estilos de extensión .css para aplicar estilos a la página. <br><br>docs : carpeta que contiene los archivos descargables desde la pagina, por ejemplo, archivos de extensión .pdf<br><br>img : carpeta que contiene archivos de extensión .png utilizados como recursos para las páginas. <br><br>js :  carpeta que contiene scripts de extensión.js.<br><br>pages : contiene archivos de extensión .html, utilizados para navegar a diferentes contenidos dentro de la página principal.">
+                </info-article> 
+
+                <info-article class="info-article card-article" id="desafios"
+                    title="Desafíos técnicos"
+                    color="bottom-green"
+                    description="Un sitio web debe mantener su estructura y estilos para todas sus páginas, la utilización de Webcomponent. Esto es importante ya que evita escribir código HTML una y otra vez en cada página. Webcomponet permite crear etiquetas HTML personalizables, las cuales se puede asignar nombre propio a cada nueva etiqueta como así también definir atributos propios de dichas etiquetas. .<br><br>Uno de los desafíos encontrados en la utilización de Webcomponent es justamente la definición los nombres de las etiquetas para mantener el código HTML de forma semántica y fácil de leer. .<br><br>Otro aspecto a tener en cuenta fueron los atributos personalizables de las etiquetas definidas anteriormente, ya que se tiene que definir qué aspectos del componente serán estáticos y cuales otros serán dinámicos, estos últimos recibirán de forma dinámica los datos y recursos necesarios para su construcción a partir de los atributos a definir.">
+                </info-article>  
+
+                <info-article class="info-article card-article" id="aprendizaje"
+                    title="Aprendizaje"
+                    color="bottom-white"
+                    description="Este proyecto me permitió aplicar y ampliar mi criterio sobre UI (user interface) y UX (user experience). La navegabilidad de la pagina, sus estructuras y sus paletas de colores.<br><br>Amplar conocimientos y utilización de repositorios como GitHub, permitiendo dividir el proyecto en diferentes branch para trabajar de forma separada los aspectos del proyecto.<br><br>También permitió aplicar y comprender la utilización de Webcomponent, permitiendo que el proyecto sea mas modular, escalable y mantenible.">
+                </info-article> 
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My website</p>
+    </footer>
+
+    <script type="module" src="../components/header.js"></script>
+    <script type="module" src="../components/nav.js"></script>
+    <script type="module" src="../components/dev_article.js"></script>
+    <script type="module" src="../components/info_article.js"></script>
+</body>
+
+</html>

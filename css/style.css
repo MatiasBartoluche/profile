@@ -34,7 +34,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: width 0.5s ease, height 0.5s ease;
+    /*transition: width 0.5s ease, height 0.5s ease;*/
 }
 
 .social-media-button::after{
@@ -93,6 +93,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease, height 0.5s ease;
+    text-decoration: none;
 }
 
 /* capa inferior, para que el boton simule un border con linear-gradient */
@@ -249,88 +250,115 @@ body{
     filter: blur(0.5rem);
 }
 
+/* efecto luz neon intermitente */
+.glow-white-infinite{
+    animation: neonWhite 2s infinite;
+}
+
+@keyframes neonWhite {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px white);
+    }
+    50% {
+        filter: drop-shadow(0 0 0px white);
+    }
+}
 /*#################################### estilos para header #################################*/
 .header{
     width: 100%;
     height: 100vh;
     color: white;
-    transition: height 0.5s ease;
     z-index: 100;/* situado por arriba de los demas elementos*/
     position: fixed;
     top: 0;
     left: 0;
     background: linear-gradient(to right, #0e4674, #4b0a80);
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
+
+.header-inner{
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
 
 .header-container{
     width: 100%;
     height: 100vh;
-    transition: height 0.5s ease;
     display: flex;
     flex-direction: column;
 }
 
 /* contenedor de titulo, subtitulo y botones de redes sociales */
-#title{
+.title{
     width: 100%;
     height: 40vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
-    transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 } 
 
-#title h1 {
+.title h1 {
     font-size: 3em;
     margin: 0;
     width: 100%;
     text-align: center;
-    transition: width 0.5s ease, height 0.5s ease;
 }
 
-#title h2 {
+.title h2 {
     font-size: 1.5em;
     margin: 0.5em 0 0;
     width: 100%;
     text-align: center;
-    transition: width 0.5s ease, height 0.5s ease;
 }
 
 /* contenedor de botones */
-#contact-buttons{
+.contact-buttons{
     width: 50%;
     height: 10vh;
-    transition: width 0.5s ease, height 0.5s ease;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    transition: none;
 }
 
 /* contenedor de imagen */
-#image-header{
+.image-header{
     width: 100%;
     height: 45vh;
     flex: 1 1 50%; /* Base 50%, crece y se achica */
-    transition: all 0.5s ease;
 }
 
-#image-header img {
+.image-header img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ajusta la imagen para llenar su contenedor */
-    transition: width 0.5s ease, height 0.5s ease;
 }
 
-#button-container{
+/* contenedor botones de redes sociales */
+.button-container{
     width: 100%;
 }
 
+/* contewnedor de los botones de abrir y cerrar pagina */
+.trapecio-wrapper{
+    position: relative;
+    left: 47%;
+    width: 10%;
+    height: 5%;
+}
+
+/* estilos aplicados al boton */
 .open-page, .close-page {
     z-index: 0;
     border: none;
-    padding: 15px 40px;
+    padding: 0 25px 0 25px;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -340,81 +368,81 @@ body{
     background: linear-gradient(to left, #0e4674, #4b0a80);
 }
 
-/* trapecio */
+/* boton forma trapecio */
 .open-page{
     position: relative;
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 
-.trapecio-wrapper{
-    position: relative;
-    bottom: 0;
-    left: 45%;
-    width: 10%;
-    height: 5%;
-    animation: neonWhite 2s infinite;
-}
-
-/* efecto luz neon intermitente */
-@keyframes neonWhite {
-    0%, 100% {
-        filter: drop-shadow(0 0 8px white);
-    }
-    50% {
-        filter: drop-shadow(0 0 0px white);
-    }
-}
-
-/* trapecio invertido */
+/* boton forma trapecio invertido */
 .close-page{
     position: relative;
-    top: -8vh;
-    display: none;
     clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
-    width: 10%;
-    height: 5%;
 }
 
-.header.animated-header .open-page{
+/* visualizacion y ubicacion del boton abrir pagina */
+#trapecio-open{
+    bottom: 0;
+}
+
+/* boton cerrar oculto */
+#trapecio-close{
+    display: none;
+    bottom: 0;
+}
+
+#trapecio-close img{
+    height: 25px;
+}
+
+/* ####################### estilos para header cuando se abre la persiana #################### */
+
+/* cuando el header se achica */
+.header.small-header .header-inner{
+    transform: scaleY(10); /* inverso de 0.1 */
+}
+
+/* ocultar boton de abrir pagina*/
+.header.small-header #trapecio-open{
     display: none;
 }
 
-.header.animated-header .close-page{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+/* mostrar boton cerrar pagina */
+.header.small-header #trapecio-close{
+    display: block;
 }
 
-/* animaciones del header, agrega clase ".animated-header" desde js y cambia estilos */ 
-.header.animated-header{
-    height: 10vh;
+/* animaciones del header, agrega clase ".small-header" desde js y cambia estilos */ 
+.header.small-header{
+    transform: scaleY(0.1); /* equivalente visual a 10vh */
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.header.animated-header .header-container{
+.header.small-header .header-container{
     height: 10vh;
     display: flex;
     flex-direction: row;
 }
 
-.header.animated-header #title{
+.header.small-header .title{
     width: 30%;
     height: 10vh;
     align-items: center;
+    font-size: small;
 }
 
-.header.animated-header #title h1{
+.header.small-header .title h1{
     width: 60%;
     max-height: fit-content;
 }
 
-.header.animated-header #title h2{
+.header.small-header .title h2{
     display: none;
 }
 
-.header.animated-header #contact-buttons{
+.header.small-header .contact-buttons{
+    transition: none;
     width: 40%;
     display: flex;
     flex-wrap: wrap;
@@ -422,36 +450,52 @@ body{
     align-content: space-around;
 }
 
-.header.animated-header .social-media-button{
+.header.small-header .social-media-button{
     width: 32px;
     height: 32px;
 }
 
-.header.animated-header #cv{
+.header.small-header #cv{
     height: 32px;
     padding: 1em;
 }
 
-.header.animated-header #image-header{
+.header.small-header .image-header{
     width: 30%;
     height: 10vh;
+}
+
+/* ############################ estilos parte central de la pagina ######################### */
+
+/* contenedor central*/
+#main-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 10vh;
+    left: 0;
+    padding-bottom: 10vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
+    display: none;
+}
+
+/* agrandar la parte principal */
+#main-container.expand{
+    display: block;
 }
 
 /* menu vertical de navegacion*/
 .menu{
     width: 100%;
-    height: 5vh;
-    display: none;
-    margin: 0;
-    padding-top: 3vh;
-    transition: all 5s ease;
-}
-
-.header.animated-header .menu{
+    min-height: 5vh;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     background-color: var(--black-transparent);
+    position: sticky;
+    top: 10vh;
+    padding-top: 2vh;
+    margin: 0;
+    z-index: 90;
 }
 
 .menu ul{
@@ -461,14 +505,16 @@ body{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu ul li{
     text-align: center;
-    padding: 1%;
     list-style: none;
-    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .menu ul li:hover{
@@ -477,11 +523,14 @@ body{
 
 .menu ul li a{
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
     color: var(--white-color);
     text-decoration: none;
-    transition: color 0.3s ease;
-    width: 100%;
 }
 
 .menu ul li a::after {
@@ -500,6 +549,7 @@ body{
     width: 100%;
 }
 
+<<<<<<< HEAD
 /*############################# estilos para la seccion toogle y paleta de colores ######### */
 #toogle-tools{
     margin-left: auto;
@@ -565,6 +615,8 @@ body{
     display: block;
 }
 
+=======
+>>>>>>> main
 #section-container{
     width: 100%;
 }
@@ -572,13 +624,12 @@ body{
 /* seccion principal */
 .section{
     width: 100%;
-    /*background-color: blueviolet;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     scroll-margin-top: 10vh;
-    padding-top: 3vh;
+    padding-top: 4vh;
 }
 
 .section h1{
@@ -588,12 +639,19 @@ body{
 }
 
 /*################################ card-article styles ######################*/
+
+/* estilos para las standar-article */
+standar-article{
+    width: 29%;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* estilos que utilizaran todos los article */
 .card-article{
-    width: 30%;
     background-color: var(--black-article);
     border-radius: var(--border-radius-article);
     color: var(--white-color);
-    margin: 1%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -603,40 +661,47 @@ body{
 
 .card-article h2{
     width: 100%;
-    margin-bottom: 0;
     text-align: center;
 }
 
-.card-article img{
-    width: 64px;
-    height: 64px;
+.info-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.card-article p{
-    width: 68%;
+.info-container img{
+    width: 28%;
     padding: 1%;
-    text-align: center;    
+    height: fit-content;
 }
 
-.education-article{
-    width: 25%;
+.info-container p{
+    width: 68%;
+    margin: 1%;
+    text-align: justify;
 }
 
-.education-article img{
-    width: 30%;
-}
-
-.education-info{
-    width: 70%;
+.info-container h3{
+    font-size: medium;
+    width: 68%;
+    margin: 1%;
+    text-align: center;
 }
 
 /* estilos articulos de skills */
 .dev-article{
-    padding: 1%;
     flex-direction: column;
     justify-content: center;
     width: 128px;
     position: relative;
+    margin: 1%;
+    padding: 1%;
+}
+
+.dev-article p{
+    text-align: center;
 }
 
 /* estilos articulos de proyectos */
@@ -649,18 +714,19 @@ body{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    
 }
 
 .card-proyect .img-content{
     width: 100%;
     padding-bottom: 1em;
+    margin: 0;
 }
 
 .card-proyect .img-content img{
     width: 100%;
+    height: 230px;
     border-radius: var(--border-radius-article) var(--border-radius-article) 0 0; /* esquinas superiores redondeadas*/
 }
 
@@ -674,6 +740,42 @@ body{
     width: 100%;
     margin: 0;
     padding: 1em;
+    text-align: justify;
+}
+
+/* estilos para el div que contiene los keyworld referentes a las tecnologias del proyecto */
+.keyworlds{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.keyworlds .keys{
+    width: 27%;
+}
+
+.keyworlds p{
+    width: auto;
+    padding: 1%;
+    margin-top: 1%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.html{
+    background-color: #F54927;
+}
+
+.css{
+    background-color: #27B0F5;
+    color: #000;
+}
+
+.javascript{
+    background-color: #CBF73E;
+    color: #000;
 }
 
 /* contenedor de botones del articulo de proyecto*/
@@ -710,6 +812,86 @@ body{
     text-align: center;
 }
 
+/* estilos para articulos informativos */
+.info-article{
+    width: 80%;
+    padding: 1%;
+    margin: 1%;
+    scroll-margin-top: 18vh;
+}
+
+.info-article h1{
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.info-article img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; /* Ajusta el tamaño según necesites */
+}
+
+/* estilos de colores para el subrayyadode titulos, primero debe usarse
+    .bottom-color y luego .neon-bottom
+*/
+.bottom-orange{
+    background: linear-gradient(90deg, #fccc74, #ff7300 , #fccc74, #ff7300);
+}
+
+.bottom-blue{
+    background: linear-gradient(90deg, #2294D4, #006097 , #2294D4, #006097);
+}
+
+.bottom-sky{
+    background: linear-gradient(90deg, #00ffd5, #00705e , #00ffd5, #00705e);
+}
+
+.bottom-green{
+    background: linear-gradient(90deg, #00FF56, #009431 , #00FF56, #009431);
+}
+
+.bottom-white{
+    background: linear-gradient(90deg, #494949, #ffffff , #494949, #ffffff);
+}
+
+.neon-bottom{
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background-size: 300% 100%;
+    animation: neonBottom 3s linear infinite;
+}
+
+@keyframes neonBottom{
+  0% {background-position: 0% 0;}
+  100% {background-position: 100% 0;}
+}
+
+/* estils para la pagina warning.html */
+.warning-article{
+    width: 50%;
+}
+
+.warning-article img{
+    width: 25%;
+}
+
+.warning-article p{
+    width: 100%;
+    font-size: large;
+    text-align: center;
+}
+
+.warning-article a{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+
+/* ############################# estilos para el formulario de comentarios ################## */
 .comment-container{
     width: 80%;
     color: var(--white-color);
@@ -784,6 +966,7 @@ body{
     padding: 1%;
 }
 
+/* ################################ estilos footer ################################# */
 .footer{
     width: 100%;
     height: 5vh;
