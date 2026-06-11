@@ -631,6 +631,12 @@ input[type='checkbox']:checked + .switch{
     display: none;
 }
 
+svg{
+    width: 30px;
+    fill: var(--white-color);
+    padding: 5px;
+}
+
 .div-dalton div{
     width: 33%;
     margin: 0;
