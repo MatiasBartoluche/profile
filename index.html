@@ -36,19 +36,6 @@
         
     </header-component>
 
-    <div id="toogle-tools">
-        <div id="div-toogle">
-            <div>toogle dark</div>
-            <div>toogle-language</div>
-        </div>
-
-        <div id="div-color">
-            <div id="protanopia"> <p>Protanopia</p> </div>
-            <div id="deuteranopia"> <p>Deuteranopia</p> </div>
-            <div id="tritanopia"> <p>Tritanopia</p> </div>
-        </div>
-    </div>
-
     <div id="main-container">
         <!--menu vertical -->
         <nav-component
@@ -60,6 +47,21 @@
                     {"name": "Habilidades" ,"link": "#fourth-section"},
                     {"name": "Proyectos" ,"link": "#fifth-section"}]'>
         </nav-component>
+
+        <div class="tools">
+            <div class="div-toggle">
+                <div class="dark-mode">
+                    <input type="checkbox" id="toggle-dark" class="offscreen">
+                    <label for="toggle-dark" class="switch"></label>
+                </div>
+            </div>
+
+            <div class="div-dalton">
+                <div class="protanopia"> <p>Protanopia</p> </div>
+                <div class="deuteranopia"> <p>Deuteranopia</p> </div>
+                <div class="tritanopia"> <p>Tritanopia</p> </div>
+            </div>
+        </div>
 
         <div id="section-container">
             <section id="first-section" class="section">

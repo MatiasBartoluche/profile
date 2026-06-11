@@ -483,6 +483,24 @@ body{
     display: block;
 }
 
+/* ############################ estilos parte central de la pagina ######################### */
+
+/* contenedor central*/
+#main-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 10vh;
+    left: 0;
+    padding-bottom: 10vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
+    transition: all 0.5s ease;
+    display: none;
+}
+
+#main-container.animated-container{
+    display: block;
+}
+
 /* menu vertical de navegacion*/
 .menu{
     width: 100%;
@@ -549,32 +567,71 @@ body{
     width: 100%;
 }
 
-<<<<<<< HEAD
+
 /*############################# estilos para la seccion toogle y paleta de colores ######### */
-#toogle-tools{
+.tools{
+    width: 40%;
     margin-left: auto;
     display: flex;
     flex-wrap: wrap;
     position: sticky;
-    top: 18%;
+    top: 17%;
     right: 0;
-    background: white;
+    background: transparent;
     z-index: 90;
 }
 
-#div-toogle, #div-color{
+.div-toogle, .div-dalton{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-#div-toogle div{
+.div-toogle div{
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
-#div-color div{
+/* etilos para label class switch */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-color: var(--white-color);
+    border-radius: 40px;
+    cursor: pointer;
+}
+/* luego de presionar el switch */
+.switch::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--black-primary);
+    border-radius: 30px;
+    left: 5px;
+    top: 5px;
+    transition: all 0.5s;
+}
+
+/* aplica a cualquier checkbox relacionado conun label class switch */
+input[type='checkbox']:checked + .switch::after{
+    transform: translateX(40px); /* desliza el circulo al otro extremo */
+    background-color: var(--white-color);
+}
+
+input[type='checkbox']:checked + .switch{
+    background-color: black; /* cambia el color del switch */
+}
+
+/* oculta la caja de seleccion del checkbox */
+.offscreen{
+    display: none;
+}
+
+.div-dalton div{
     width: 33%;
     margin: 0;
     padding: 0;
@@ -582,41 +639,22 @@ body{
     justify-content: center;
 }
 
-#protanopia{
+.protanopia{
     background-color: #DDAA33;
     color:#004488;
 }
 
-#deuteranopia{
+.deuteranopia{
     background-color: #058ed9;
     color: #ff934f;
 }
 
-#tritanopia{
+.tritanopia{
     background-color: #D55E00;
     color: #009E73;
 }
 
-/* ############################ estilos parte central de la pagina ######################### */
 
-/* contenedor central*/
-#main-container{
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 15vh;
-    left: 0;
-    padding-bottom: 10vh; /* 5% del alto del footer + 1% del padding superior e inferior del footer + 1% para separarlo un poco mas*/
-    transition: all 0.5s ease;
-    display: none;
-}
-
-#main-container.animated-container{
-    display: block;
-}
-
-=======
->>>>>>> main
 #section-container{
     width: 100%;
 }
