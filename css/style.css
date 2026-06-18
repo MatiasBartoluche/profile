@@ -5,7 +5,7 @@
     --black-primary: #161616;
     --black-button: #161a20;
     --black-article: #333;
-    --black-transparent: #000000cc;
+
     --white-color: #f0f0f0;
     --border-radius-article: 12px;
 }
@@ -15,6 +15,8 @@
     --background-color: #121212;
     --text-color: white;
 
+    --background-nav: #000000cc;
+
     --background-toggle : white;
     --toggle-color: black;
 }
@@ -23,6 +25,8 @@
 .light-theme {
     --background-color: white;
     --text-color: black;
+
+    --background-nav: #000000;
 
     --background-toggle : #000000cc;
     --toggle-color: white;
@@ -528,7 +532,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    background-color: var(--black-transparent);
+    background-color: var(--background-nav);
     position: sticky;
     top: 10vh;
     padding-top: 2vh;
