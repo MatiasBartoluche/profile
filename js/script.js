@@ -13,9 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
         main_container.classList.add('expand');
     }
 
+    toggleDark()
+
     //newComment();
     //loadComments();
   });
+
+
+function toggleDark(){
+  var verificar_toggle = document.getElementById('toggle-dark');
+
+  verificar_toggle.addEventListener('change', (evento) => {
+    if(verificar_toggle.checked){
+      console.log('toggle white');
+    }
+    else{
+      console.log('toggle dark');
+    }
+  });
+}
 
 // funcion que captura datos del formulario y lo inserta en la pagina
 function newComment(){
