@@ -5,9 +5,27 @@
     --black-primary: #161616;
     --black-button: #161a20;
     --black-article: #333;
-    --black-transparent: rgba(0, 0, 0, 0.8);
+    --black-transparent: #000000cc;
     --white-color: #f0f0f0;
     --border-radius-article: 12px;
+}
+
+/* estilos pagina dark */
+.dark-theme {
+    --background-color: #121212;
+    --text-color: white;
+
+    --background-toggle : white;
+    --toggle-color: black;
+}
+
+/* estilos pagina light */
+.light-theme {
+    --background-color: white;
+    --text-color: black;
+
+    --background-toggle : #000000cc;
+    --toggle-color: white;
 }
 
 html {
@@ -19,7 +37,9 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--black-primary);
+
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* ################################### estilos generales ###################################*/
@@ -599,7 +619,7 @@ body{
     display: inline-block;
     width: 80px;
     height: 40px;
-    background-color: var(--white-color);
+    background-color: var(--background-toggle);
     border-radius: 40px;
     cursor: pointer;
     display: flex;
@@ -610,7 +630,7 @@ body{
     position: absolute;
     width: 30px;
     height: 30px;
-    background-color: var(--black-primary);
+    background-color: var(--toggle-color);
     border-radius: 30px;
     left: 5px;
     top: 5px;
@@ -620,11 +640,11 @@ body{
 /* aplica a cualquier checkbox relacionado conun label class switch */
 input[type='checkbox']:checked + .switch::after{
     transform: translateX(40px); /* desliza el circulo al otro extremo */
-    background-color: var(--white-color);
+    background-color: var(--toggle-color);
 }
 
 input[type='checkbox']:checked + .switch{
-    background-color: black; /* cambia el color del switch */
+    background-color: var(--background-toggle); /* cambia el color del switch */
 }
 
 /* oculta la caja de seleccion del checkbox */
@@ -638,11 +658,11 @@ svg{
 }
 
 .sun-toggle{
-    fill: var(--white-color);
+    fill: var(--toggle-color);
 }
 
 .moon-toggle{
-    fill: var(--black-color);
+    fill: var(--toggle-color);
 }
 
 .div-dalton div{
