@@ -602,6 +602,7 @@ body{
     background-color: var(--white-color);
     border-radius: 40px;
     cursor: pointer;
+    display: flex;
 }
 /* luego de presionar el switch */
 .switch::after{
@@ -633,8 +634,15 @@ input[type='checkbox']:checked + .switch{
 
 svg{
     width: 30px;
-    fill: var(--white-color);
     padding: 5px;
+}
+
+.sun-toggle{
+    fill: var(--white-color);
+}
+
+.moon-toggle{
+    fill: var(--black-color);
 }
 
 .div-dalton div{
