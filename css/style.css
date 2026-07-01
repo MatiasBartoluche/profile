@@ -14,22 +14,27 @@
 .dark-theme {
     --background-color: #121212;
     --text-color: white;
-
     --background-nav: #000000cc;
-
     --background-toggle : white;
     --toggle-color: black;
+    --background-article: #333;
+    --text-article: white;
 }
 
 /* estilos pagina light */
 .light-theme {
-    --background-color: white;
+    --background-color: #d8d8d8;
     --text-color: black;
-
     --background-nav: #000000;
-
     --background-toggle : #000000cc;
     --toggle-color: white;
+    --background-article: #5c5c5c;
+    --text-article: white;
+}
+
+/* sombreado para artiuculos em modo light */
+.light-theme .card-article{
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 1);
 }
 
 html {
@@ -41,7 +46,6 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -725,9 +729,9 @@ standar-article{
 
 /* estilos que utilizaran todos los article */
 .card-article{
-    background-color: var(--black-article);
+    background-color: var(--background-article);
     border-radius: var(--border-radius-article);
-    color: var(--white-color);
+    color: var(--text-article);
     position: relative;
     display: flex;
     flex-wrap: wrap;
