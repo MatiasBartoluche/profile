@@ -1,4 +1,32 @@
+// conserva el estado del toggle switch al retroceder entre paginas
+window.addEventListener('pageshow', function(){
+    var toggle = document.getElementById('toggle-dark');
+    
+    // Recupero el último valor del toggle
+    var page_style = localStorage.getItem('style');
+    
+    // En caso de ser null, guardo 'dark'
+    if(page_style === null){
+        page_style = 'dark';
+        localStorage.setItem('style', page_style);
+    }
+    
+    // Restauro estado del toggle (AHORA SÍ SE EJECUTARÁ AL VOLVER)
+    toggle.checked = page_style === 'dark';
+    
+    // Aplico estilos
+    changeStyle(page_style);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.getElementById('toggle-dark');
+
+    toggle.addEventListener('change', () => {
+        const nuevoEstilo = toggle.checked ? 'dark' : 'white';
+        localStorage.setItem('style', nuevoEstilo);
+        changeStyle(nuevoEstilo);
+    });
+
     const header = document.getElementById('main-header');
     const main_container = document.getElementById('main-container');
 
@@ -14,7 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //newComment();
     //loadComments();
-  });
+});
+
+function changeStyle(style){
+    if(style === 'dark'){
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+    }
+    else{
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+    }
+}
 
 // funcion que captura datos del formulario y lo inserta en la pagina
 function newComment(){
