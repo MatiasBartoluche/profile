@@ -1,24 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    var toggle = document.getElementById('toggle-dark');
-    // recupero el ultimo valor del toggle
-    var page_style = localStorage.getItem('style');
-    // en caso de ser null, guardo 'dark' para inicializar la pagina en tema oscuro
-    if(page_style === null){
-      page_style = 'dark';
-      localStorage.setItem('style', page_style);
-    }
-    // restauro estado del toggle
-    toggle.checked = page_style === 'dark';
-    // aplico estilos
-    changeStyle(page_style);
-
-    toggle.addEventListener('change', () => {
-        const nuevoEstilo = toggle.checked ? 'dark' : 'white';
-        localStorage.setItem('style', nuevoEstilo);
-        changeStyle(nuevoEstilo);
-    });
-  
     const header = document.getElementById('main-header');
     const main_container = document.getElementById('main-container');
 
@@ -35,17 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //newComment();
     //loadComments();
   });
-
-function changeStyle(style){
-  if(style === 'dark'){
-    document.body.classList.add('dark-theme');
-    document.body.classList.remove('light-theme');
-  }
-  else{
-    document.body.classList.add('light-theme');
-    document.body.classList.remove('dark-theme');
-  }
-}
 
 // funcion que captura datos del formulario y lo inserta en la pagina
 function newComment(){
