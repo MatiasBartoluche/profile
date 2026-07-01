@@ -19,6 +19,7 @@
     --toggle-color: black;
     --background-article: #333;
     --text-article: white;
+    --text-h1: white;
 }
 
 /* estilos pagina light */
@@ -30,6 +31,7 @@
     --toggle-color: white;
     --background-article: #5c5c5c;
     --text-article: white;
+    --text-h1: black;
 }
 
 /* sombreado para artiuculos em modo light */
@@ -715,7 +717,7 @@ svg{
 .section h1{
     width: 100%;
     text-align: center;
-    color: #f0f0f0;
+    color: var(--text-h1);
 }
 
 /*################################ card-article styles ######################*/
