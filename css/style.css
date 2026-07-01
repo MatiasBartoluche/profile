@@ -741,6 +741,10 @@ standar-article{
     align-items: center;
 }
 
+.card-article h1{
+    color: var(--text-article);
+}
+
 .card-article h2{
     width: 100%;
     text-align: center;

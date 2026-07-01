@@ -36,8 +36,6 @@
         
     </header-component>
 
-    <div id="toogle-tools"></div>
-
     <div id="main-container">
         <!--menu vertical -->
         <nav-component
@@ -50,6 +48,14 @@
                     {"name": "Aprendizaje" ,"link": "#aprendizaje"},
                     {"name": "Página principal" ,"link": "../index.html"}]'>
         </nav-component>
+
+        <div class="tools">
+            <div class="div-toggle">
+                <toggle-switch class="dark-toggle" type="dark">
+                    
+                </toggle-switch>
+            </div>
+        </div>
 
         <div id="section-container">
             <section class="section">
@@ -114,6 +120,7 @@
 
     <script type="module" src="../components/header.js"></script>
     <script type="module" src="../components/nav.js"></script>
+    <script type="module" src="../components/toggle_switch.js"></script>
     <script type="module" src="../components/dev_article.js"></script>
     <script type="module" src="../components/info_article.js"></script>
 </body>
