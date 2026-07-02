@@ -1,24 +1,22 @@
 // conserva el estado del toggle switch al retroceder entre paginas
 window.addEventListener('pageshow', function(){
+    // obtener el id del switch
     var toggle = document.getElementById('toggle-dark');
-    
     // Recupero el último valor del toggle
     var page_style = localStorage.getItem('style');
-    
     // En caso de ser null, guardo 'dark'
     if(page_style === null){
         page_style = 'dark';
         localStorage.setItem('style', page_style);
     }
-    
     // Restauro estado del toggle (AHORA SÍ SE EJECUTARÁ AL VOLVER)
     toggle.checked = page_style === 'dark';
-    
     // Aplico estilos
     changeStyle(page_style);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // obtener el id del switch
     var toggle = document.getElementById('toggle-dark');
 
     toggle.addEventListener('change', () => {
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.getElementById('main-header');
     const main_container = document.getElementById('main-container');
-
     // recupero estado de "abierto" o "cerrado" de la pagina
     const state = localStorage.getItem('pageState');
 
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add('small-header');
         main_container.classList.add('expand');
     }
-
     //newComment();
     //loadComments();
 });
