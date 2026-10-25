@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="../img/dev.png">
+    <title>Matiías Bartoluche</title>
+
+    <!-- script necesario para evitar parmadeo de pagina
+     y evitar visualizar la animacion del header al recargar pagina-->
+    <script>
+    (function() {
+        const state = localStorage.getItem('pageState');
+
+        if (state === 'open') {
+            document.documentElement.classList.add('page-open');
+        }
+    })();
+    </script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+
+    <!--
+    <script src="https://cdn.counter.dev/script.js" data-id="0fc0c2cd-15ff-4a20-9af8-517675cfaf17" data-utcoffset="-3"></script>
+    -->
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body id="body">
+    <header-component id="main-header" class="header small-header">
+        
+    </header-component>
+
+    <div id="toogle-tools"></div>
+
+    <div id="main-container">
+        <nav-component
+            id="main-menu"
+            class="menu"
+            links='[{"name": "Item 1" ,"link": "#"},
+                    {"name": "Item 2" ,"link": "#"},
+                    {"name": "Item 3" ,"link": "#"},
+                    {"name": "Item 4" ,"link": "#"},
+                    {"name": "Item 5" ,"link": "#"}]'>
+        </nav-component>
+
+        <div id="section-container">
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My website</p>
+    </footer>
+
+    <script type="module" src="../components/header.js"></script>
+    <script type="module" src="../components/nav.js"></script>
+</body>
+
+</html>
