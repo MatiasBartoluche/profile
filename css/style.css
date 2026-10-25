@@ -764,7 +764,7 @@ standar-article{
   width: 30%; /* Ajusta el tamaño según necesites */
 }
 
-/* estilos de colores para el subrayyadode titulos, primero debe usarse
+/* estilos de colores para el subrayadode titulos, primero debe usarse
     .bottom-color y luego .neon-bottom
 */
 .bottom-orange{
@@ -800,6 +800,14 @@ standar-article{
 @keyframes neonBottom{
   0% {background-position: 0% 0;}
   100% {background-position: 100% 0;}
+}
+
+.dev-section{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 /* estils para la pagina warning.html */
